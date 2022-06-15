@@ -8,13 +8,13 @@ import { ContextProvider } from './context';
 const App = () => {
   return (
     <ContextProvider>
+      <Header />
       <Router>
-        <Header />
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
-        <Footer />
       </Router>
+      <Footer />
     </ContextProvider>
   );
 }
