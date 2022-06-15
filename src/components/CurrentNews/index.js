@@ -1,19 +1,17 @@
 const CurrentNews = () => {
 
   return (
-    <div className="row">
-      <div className="card mb-3" style={{ maxWidth: "540px" }}>
-        <div className="row g-0">
-          <div className="col-md-6">
-            <img className="img-fluid rounded-start" src="https://www.adslzone.net/app/uploads-adslzone.net/2019/04/borrar-fondo-imagen.jpg" alt="..." />
-          </div>
-          <div className="col-md-6">
-            <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
+    <div className="card d-flex flex-row mb-2 mw-60 p-3 ">
+      <img 
+        src="https://www.clarin.com/img/2022/06/15/el-presidente-de-ucrania-volodymyr___8K988Pvnx_1200x630__1.jpg" 
+        className="card-img-top img-fluid w-50" alt="..."
+      />
+      <div className="card-body d-flex flex-column justify-content-between align-items-start ">
+        <div className=" p-2 bg-primary rounded-3 my-1"> CNN Spanish</div>
+        <h5 className="card-title my-1">Guerra Rusia-Ucrania, en vivo: la inquietante advertencia de Zelenski sobre el plan de Putin si consigue un - Clarín</h5>
+        <p className="card-text my-1">El presidente ucraniano, Volodímir Zelenski, advirtió este miércoles de que si Moscú triunfa en su invasión de Ucrania podría atacar a otros países, entre los que señaló a Polonia, República Checa y Bulgaria.\"La tiranía no quiere pararse en el territorio de</p>
+        <div className="align-self-end">
+          <a href="/" className="btn btn-dark"> Leer más</a>
         </div>
       </div>
     </div>
