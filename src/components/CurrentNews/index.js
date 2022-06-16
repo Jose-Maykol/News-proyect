@@ -1,7 +1,7 @@
 const CurrentNews = () => {
 
   return (
-    <div className="card d-flex flex-row mb-2 mw-60 p-3 ">
+    <div className="card d-flex flex-row mb-2 mw-60 p-3 my-3">
       <img 
         src="https://www.clarin.com/img/2022/06/15/el-presidente-de-ucrania-volodymyr___8K988Pvnx_1200x630__1.jpg" 
         className="card-img-top img-fluid w-50" alt="..."

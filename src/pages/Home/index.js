@@ -1,16 +1,17 @@
 import React from "react";
 import FeaturedNews from "../../components/FeaturedNews";
 import CurrentNews from "../../components/CurrentNews";
-import TittleCurrentNews from "../../components/TittleCurrentNews";
-import TittleFeatureNews from "../../components/TittleFeatureNews";
+import TitleTypeNews from "../../components/TitleTypeNews";
+
+import './Home.css'
 
 const Home = () => {
 
   return (
-    <div className="container my-5">
-      <TittleFeatureNews />
+    <div className="container content-home">
+      <TitleTypeNews text="Noticias destacadas"/>
       <FeaturedNews />
-      <TittleCurrentNews />
+      <TitleTypeNews text="Noticias actuales"/>
       <CurrentNews />
     </div>
   );

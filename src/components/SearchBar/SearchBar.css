@@ -1,0 +1,18 @@
+.search {
+    display: flex;
+    flex: 1;
+}
+
+.search input {
+    background-color: transparent;
+    border: none;
+    width: 80%;
+}
+
+.search-icon {
+    background-color: transparent;
+}
+
+.search-icon i {
+    color: white;
+}
