@@ -7,7 +7,8 @@ export const ContextProvider = ({ children }) => {
 
     const [Feature, setFeature] = useState(null)
     const [Current, setCurrent] = useState(null)
-    const [LimitCurrent, setLimitCurrent] = useState(null);
+    const [LimitCurrent, setLimitCurrent] = useState(null)
+    const [Category, setCategory] = useState(null)
 
     const getCurrentNews = async () => {
         let now = new Date();
@@ -24,7 +25,13 @@ export const ContextProvider = ({ children }) => {
         ).then(res => res.json()).then(res => setFeature(res.articles));
     }
 
+    const getCategoryNews = async (CATEGORY) => {
+        return await fetch(
+            `${API_URL}/top-headlines?country=ar&pageSize=10&apiKey=${API_KEY}&category=${CATEGORY}`
+        ).then(res => res.json()).then(res => setCategory(res.articles));
+    }
 
+    console.log(Category)
 
     useEffect(() => {
         getCurrentNews();
@@ -32,7 +39,7 @@ export const ContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <ApiContext.Provider value={{ getCurrentNews, getFeaturedNews, Feature, Current, setLimitCurrent, LimitCurrent }}>
+        <ApiContext.Provider value={{ getCurrentNews, getFeaturedNews, Feature, Current, setLimitCurrent, LimitCurrent, getCategoryNews, Category }}>
             {children}
         </ApiContext.Provider>
     )
