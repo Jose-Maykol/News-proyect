@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: .5rem ;
+    padding: .5rem;
     position: fixed;
     width: 100%;
     top: 0;
     background-color: black;
     color: white;
+    z-index: 5;
 }
 
 .header-logo {
@@ -33,14 +34,14 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 2rem;
-    
+
     padding: 0 1rem;
     width: 100%;
 }
 
-.header-login a{
+.header-login a {
     display: flex;
-    padding: .35em 1.2em; 
+    padding: .35em 1.2em;
     border: 0.1em solid white;
     text-decoration: none;
     border-radius: .12em;
@@ -49,7 +50,7 @@
     font-weight: bold;
 }
 
-.header-login a:hover{
+.header-login a:hover {
     color: black;
     background-color: white;
 }

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import { ContextProvider } from './context';
+import NewsContainer from './components/NewsContainer';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/detail/:id' component={NewsContainer} />
         </Routes>
       </Router>
       <Footer />
