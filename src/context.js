@@ -6,6 +6,8 @@ export const ApiContext = createContext()
 export const ContextProvider = ({ children }) => {
 
     const [Feature, setFeature] = useState(null)
+    const [Current, setCurrent] = useState(null)
+    const [LimitCurrent, setLimitCurrent] = useState(null);
 
     const getCurrentNews = async () => {
         let now = new Date();
@@ -13,7 +15,7 @@ export const ContextProvider = ({ children }) => {
         let date = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}T${time}`;
         return await fetch(
             `${API_URL}/top-headlines?sources=infobae,google-news-ar,cnn-es,el-mundo,la-gaceta,la-nacion,marca&from=${date}&apiKey=${API_KEY}`
-        ).then(res => res.json()).then(res => console.log(res))
+        ).then(res => res.json()).then(res => setCurrent(res.articles))
     }
 
     const getFeaturedNews = async () => {
@@ -22,13 +24,15 @@ export const ContextProvider = ({ children }) => {
         ).then(res => res.json()).then(res => setFeature(res.articles));
     }
 
+
+
     useEffect(() => {
-        //getCurrentNews();
+        getCurrentNews();
         getFeaturedNews();
     }, [])
 
     return (
-        <ApiContext.Provider value={{ getCurrentNews, getFeaturedNews, Feature }}>
+        <ApiContext.Provider value={{ getCurrentNews, getFeaturedNews, Feature, Current, setLimitCurrent, LimitCurrent }}>
             {children}
         </ApiContext.Provider>
     )
