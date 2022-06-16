@@ -1,0 +1,16 @@
+.title-new {
+    display: flex;
+    width: 100%;
+    border-bottom: .3rem solid black;
+    border-left: .5rem solid #157DEC;
+}
+
+.title-box {
+    padding: .3rem 3rem 0 1rem;
+    color: white;
+    background-color: black;
+}
+
+.title-box h2 {
+    font-size: 1.5rem;
+}

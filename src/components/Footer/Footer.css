@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  background-color: var(--negro);
+}
+
+.footer-content p {
+  padding-top: 0.3rem;
+  color: var(--blanco);
+}
+
+.footer-icon-media {
+  background-color: transparent;
+}
+
+.footer-icon-media i {
+  padding: 0 10px;
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.footer-icon-media i:hover {
+  color: var(--gris);
+}
