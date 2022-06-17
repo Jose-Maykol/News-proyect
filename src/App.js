@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import { ContextProvider } from './context';
 import NewsContainer from './components/NewsContainer';
 import Category from './pages/Category';
+import Login from './pages/Login';
 
 const App = () => {
   return (
@@ -15,10 +16,11 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/detail/:id' component={NewsContainer} />
+          <Route path='/login' element={<Login/>}/>
           <Route path="/category" element={<Category />} />
         </Routes>
       </Router>
-      <Footer />
+      {/* <Footer /> */}
     </ContextProvider>
   );
 }
