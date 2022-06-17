@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Login.css'
 
 const Login = () => {
-  return ( 
+  return (
     <div className="login-container">
       <div className="image-container">
         <img src="/img/login.jpg" alt="" />
@@ -11,26 +12,30 @@ const Login = () => {
         <h3> Bienvenido a <span> NEWS </span></h3>
         <h1>INICIA SESION</h1>
         <form className="login-form" action="">
-          <input 
-            className="login-input" 
-            type="email" name="" 
-            id="login-email" 
+          <input
+            className="login-input"
+            type="email" name=""
+            id="login-email"
             placeholder="Correo electronico"
           />
-          <input 
-            className="login-input" 
-            type="password" name="" 
-            id="login-password" 
+          <input
+            className="login-input"
+            type="password" name=""
+            id="login-password"
             placeholder="Contraseña"
             autoComplete="on"
           />
           <a id="retrieve" href="/">¿Te olvidastes tu contraseña?</a>
           <button type="submit">Ingresar</button>
-          <p id="create"> ¿Aún no tienes cuenta?<a href="/"> Create una cuenta aqui. </a></p>
+          <p id="create"> ¿Aún no tienes cuenta?
+            <Link to="/register">
+              <span href="/"> Create una cuenta aqui. </span>
+            </Link>
+          </p>
         </form>
       </div>
-    </div>
-   );
+    </div >
+  );
 }
- 
+
 export default Login;

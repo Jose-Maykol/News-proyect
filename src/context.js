@@ -31,8 +31,6 @@ export const ContextProvider = ({ children }) => {
         ).then(res => res.json()).then(res => setCategory(res.articles));
     }
 
-    console.log(Category)
-
     useEffect(() => {
         getCurrentNews();
         getFeaturedNews();

@@ -8,6 +8,7 @@ import NewsContainer from './components/NewsContainer';
 import Category from './pages/Category';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Search from './pages/Search';
 
 const App = () => {
   return (
@@ -17,9 +18,10 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/detail/:id' component={NewsContainer} />
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
           <Route path="/category" element={<Category />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </Router>
       {/* <Footer /> */}
