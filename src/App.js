@@ -7,6 +7,7 @@ import { ContextProvider } from './context';
 import NewsContainer from './components/NewsContainer';
 import Category from './pages/Category';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/detail/:id' component={NewsContainer} />
           <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
           <Route path="/category" element={<Category />} />
         </Routes>
       </Router>
