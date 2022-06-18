@@ -2,7 +2,7 @@ import React from "react";
 import './Header.css'
 import NavBar from "../NavBar";
 import SearchBar from "../SearchBar";
-import { Link } from "react-router-dom";
+import UserBar from "../UserBar";
 
 const Header = () => {
   return (
@@ -13,11 +13,7 @@ const Header = () => {
       <div className="header-box">
         <div className="header-searchLogin">
           <SearchBar />
-          <div className="header-login">
-            <Link to="/login">
-              <span >Iniciar sesión</span>
-            </Link>
-          </div>
+          <UserBar />
         </div>
         <NavBar />
       </div>
