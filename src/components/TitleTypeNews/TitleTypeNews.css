@@ -1,7 +1,7 @@
 .title-new {
     display: flex;
     width: 100%;
-    border-bottom: .3rem solid black;
+    border-bottom: .2rem solid black;
     border-left: .5rem solid #157DEC;
 }
 
