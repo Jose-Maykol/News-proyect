@@ -10,7 +10,7 @@ const NewsContainer = () => {
     const { Current, Category } = useContext(ApiContext);
 
     let filterCurrent = Current.filter(ele => `/detail/${ele.publishedAt}` === location.pathname);  // Si se rompe aca es !!
-    let filterCategory = Category.filter(ele => `/detail/${ele.publishedAt}` === location.pathname); // Si se rompe aca es !!
+    //let filterCategory = Category.filter(ele => `/detail/${ele.publishedAt}` === location.pathname); // Si se rompe aca es !!
 
     return (
         <div>
@@ -18,10 +18,10 @@ const NewsContainer = () => {
                 filterCurrent.map(res =>
                     <NewsDetails noticia={res} />
                 ) : null}
-            {filterCategory ?
+            {/*{filterCategory ?
                 filterCategory.map(res =>
                     <NewsDetails noticia={res} />
-                ) : null}
+                ) : null} */}
         </div>
     )
 }
