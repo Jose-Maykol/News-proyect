@@ -12,15 +12,18 @@ const NewsContainer = () => {
     let filterCurrent = Current.filter(ele => `/detail/${ele.publishedAt}` === location.pathname);
     let filterCategory = Category.filter(ele => `/detail/${ele.publishedAt}` === location.pathname);
 
+    console.log(filterCategory)
 
     return (
         <div>
-            {filterCurrent.map(res =>
-                <NewsDetails noticia={res} />
-            )}
-            {filterCategory.map(res =>
-                <NewsDetails noticia={res} />
-            )}
+            {filterCurrent ?
+                filterCurrent.map(res =>
+                    <NewsDetails noticia={res} />
+                ) : null}
+            {filterCategory ?
+                filterCategory.map(res =>
+                    <NewsDetails noticia={res} />
+                ) : null}
         </div>
     )
 }

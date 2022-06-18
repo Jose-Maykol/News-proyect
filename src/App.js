@@ -14,6 +14,7 @@ import Category from './pages/Category';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Search from './pages/Search';
+import CurrentNews from './components/CurrentNews';
 
 const App = () => {
 
@@ -26,17 +27,20 @@ const App = () => {
   }, []);
 
   return (
+
     <ContextProvider>
       <Router>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/detail/:token' element={<NewsDetailContainer />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path="/category" element={<Category />} />
-          <Route path="/search" element={<Search />} />
-        </Routes>
+        <AuthProvider value={{ currentUser }}>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/detail/:token' element={<NewsDetailContainer />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/search" element={<Search />} />
+          </Routes>
+        </AuthProvider>
       </Router>
       {/* <Footer /> */}
     </ContextProvider>
