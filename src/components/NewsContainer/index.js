@@ -3,6 +3,7 @@ import News from "../News"
 
 const index = ({ noticia }) => {
 
+
     return (
         <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">

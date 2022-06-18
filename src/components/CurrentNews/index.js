@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { ApiContext } from '../../context';
+import { Link } from "react-router-dom";
 
 const CurrentNews = () => {
 
@@ -9,7 +10,7 @@ const CurrentNews = () => {
     <div>
       {Current ?
         Current.map(news =>
-          <div className="card d-flex flex-row mb-2 p-3 my-3 mx-5">
+          <div className="card d-flex flex-row mb-2 p-3 my-3 mx-5" key={news.publishedAt}>
             <img
               src={news.urlToImage}
               className="card-img-top img-fluid w-50" alt="..."
@@ -19,7 +20,9 @@ const CurrentNews = () => {
               <h5 className="card-title my-1">{news.title}</h5>
               <p className="card-text my-1">{news.description}</p>
               <div className="align-self-end">
-                <a href="/" className="btn btn-dark"> Leer más</a>
+                <Link to={`/detail/${news.publishedAt}`}>
+                  <span className="btn btn-dark"> Leer más</span>
+                </Link>
               </div>
             </div>
           </div>

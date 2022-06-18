@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import { ContextProvider } from './context';
-import NewsContainer from './components/NewsContainer';
+import NewsDetailContainer from './components/NewsDetailContainer';
 import Category from './pages/Category';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -17,7 +17,7 @@ const App = () => {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/detail/:id' component={NewsContainer} />
+          <Route path='/detail/:token' element={<NewsDetailContainer />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path="/category" element={<Category />} />
