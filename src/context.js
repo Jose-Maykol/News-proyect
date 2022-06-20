@@ -1,5 +1,7 @@
 import React, { useState, createContext, useEffect } from 'react';
 import { API_KEY, API_URL } from "./services/settings";
+import { v4 as uuidv4 } from 'uuid';
+
 
 export const ApiContext = createContext()
 
@@ -14,21 +16,30 @@ export const ContextProvider = ({ children }) => {
         let now = new Date();
         let time = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
         let date = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}T${time}`;
-        return await fetch(
+        let res = await fetch(
             `${API_URL}/top-headlines?sources=infobae,google-news-ar,cnn-es,el-mundo,la-gaceta,la-nacion,marca&from=${date}&apiKey=${API_KEY}`
-        ).then(res => res.json()).then(res => setCurrent(res.articles))
+        ).then(res => res.json()).then(res => res.articles);
+        let arr = []
+        res.map(ele => arr.push({ ...ele, id: uuidv4() }))
+        setCurrent(arr)
     }
 
     const getFeaturedNews = async () => {
-        return await fetch(
+        let res = await fetch(
             `${API_URL}/top-headlines?country=ar&pageSize=4&apiKey=${API_KEY}`
-        ).then(res => res.json()).then(res => setFeature(res.articles));
+        ).then(res => res.json()).then(res => res.articles);
+        let arr = []
+        res.map(ele => arr.push({ ...ele, id: uuidv4() }))
+        setFeature(arr)
     }
 
     const getCategoryNews = async (CATEGORY) => {
-        return await fetch(
+        let res = await fetch(
             `${API_URL}/top-headlines?country=ar&pageSize=10&apiKey=${API_KEY}&category=${CATEGORY}`
-        ).then(res => res.json()).then(res => setCategory(res.articles));
+        ).then(res => res.json()).then(res => res.articles);
+        let arr = []
+        res.map(ele => arr.push({ ...ele, id: uuidv4() }))
+        setCategory(arr)
     }
 
     useEffect(() => {

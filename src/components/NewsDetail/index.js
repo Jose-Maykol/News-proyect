@@ -1,10 +1,10 @@
 import React from 'react'
 
-const NewsDetails = ({ noticia: { author, content, description, publishedAt, title, urlToImage, url, source } }) => {
+const NewsDetails = ({ noticia: { author, content, description, publishedAt, title, urlToImage, url, source, id } }) => {
 
     return (
-        <div style={{ marginTop: "150px" }}>
-            <div className="card d-flex flex-row mb-2 p-3 my-3 mx-5" key={publishedAt} >
+        <div style={{ marginTop: "150px" }} key={id}>
+            <div className="card d-flex flex-row mb-2 p-3 my-3 mx-5"  >
                 <img
                     src={urlToImage}
                     className="card-img-top img-fluid w-50" alt="..."

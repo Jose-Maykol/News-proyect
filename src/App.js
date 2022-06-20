@@ -9,12 +9,10 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { ContextProvider } from './context';
 import NewsDetailContainer from './components/NewsDetailContainer';
 import { AuthProvider } from './AuthContext';
-import NewsContainer from './components/NewsContainer';
 import Category from './pages/Category';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Search from './pages/Search';
-import CurrentNews from './components/CurrentNews';
 
 const App = () => {
 
@@ -34,7 +32,7 @@ const App = () => {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/detail/:token' element={<NewsDetailContainer />} />
+            <Route path='/detail/:id' element={<NewsDetailContainer />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path="/category" element={<Category />} />

@@ -1,7 +1,7 @@
 import React from 'react';
 import News from "../News"
 
-const index = ({ noticia }) => {
+const NewsContainer = ({ noticia }) => {
 
 
     return (
@@ -38,4 +38,4 @@ const index = ({ noticia }) => {
     )
 }
 
-export default index
+export default NewsContainer
