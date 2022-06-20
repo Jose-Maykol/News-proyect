@@ -14,9 +14,9 @@ const NewsDetails = ({
   },
 }) => {
   return (
-    <div class="container content-home" key={id}>
-      <div class="title-new">
-        <div class="title-box">
+    <div className="container content-home" key={id}>
+      <div className="title-new">
+        <div className="title-box">
           <h2>{source.name}</h2>
         </div>
       </div>
