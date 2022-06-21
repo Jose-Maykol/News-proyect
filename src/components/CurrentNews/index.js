@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { ApiContext } from '../../context';
 import { Link } from "react-router-dom";
+import './CurrentNews.css'
 
 const CurrentNews = () => {
 
@@ -16,7 +17,7 @@ const CurrentNews = () => {
               className="card-img-top img-fluid w-50" alt="..."
             />
             <div className="card-body d-flex flex-column justify-content-between align-items-start ">
-              <div className=" p-2 bg-primary rounded-3 my-1">{news.source.name}</div>
+              <div className={`source-name ${news.source.name.replace(/ /g, "").replace(/\(|\)/g, "")}`}>{news.source.name}</div>
               <h5 className="card-title my-1">{news.title}</h5>
               <p className="card-text my-1">{news.description}</p>
               <div className="align-self-end">

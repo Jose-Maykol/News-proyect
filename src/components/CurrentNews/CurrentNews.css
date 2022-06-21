@@ -1,0 +1,42 @@
+
+
+.source-name {
+  border-radius: .3rem;
+  padding: .2rem 1.5rem;
+  font-weight: 500;
+  border: 1px solid var(--blanco);
+}
+.CNNSpanish {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.ElMundo {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+.GoogleNewsArgentina {
+  background-color: var(--negro2);
+  color: var(--blanco);
+}
+
+.Infobae {
+  background-color: var(--naranja);
+  color: var(--blanco);
+}
+
+.LaGaceta {
+  background-color: var(--azul2);
+  color: var(--blanco);
+}
+
+.LaNacion {
+  background-color: var(--azul-oscuro2);
+  color: var(--blanco);
+}
+
+.Marca {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
