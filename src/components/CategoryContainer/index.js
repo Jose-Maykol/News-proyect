@@ -14,14 +14,13 @@ const CategoryContainer = () => {
         filterCategory = Category.filter(ele => `/detail/${ele.id}` === location.pathname); // Si se rompe aca es !!
     }
 
-
     return (
-        <div>
+        <>
             {filterCategory ?
                 filterCategory.map(res =>
                     <NewsDetails noticia={res} key={res.id} />
                 ) : null}
-        </div>
+        </>
     )
 }
 

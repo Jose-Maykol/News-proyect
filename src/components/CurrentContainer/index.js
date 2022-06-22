@@ -4,6 +4,7 @@ import { ApiContext } from '../../context';
 import NewsDetails from '../NewsDetail';
 
 
+
 const CurrentContainer = () => {
 
     let location = useLocation();
@@ -13,12 +14,12 @@ const CurrentContainer = () => {
     let filterCurrent = Current.filter(ele => `/detail/${ele.id}` === location.pathname);
 
     return (
-        <div>
+        <>
             {filterCurrent ?
                 filterCurrent.map(res =>
                     <NewsDetails noticia={res} key={res.id} />
                 ) : null}
-        </div>
+        </>
     )
 }
 
