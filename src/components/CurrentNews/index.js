@@ -11,18 +11,18 @@ const CurrentNews = () => {
     <div>
       {Current ?
         Current.map(news =>
-          <div className="card d-flex flex-row mb-2 p-3 my-3 mx-5" key={news.id}>
+          <div className="current-news-cart" key={news.id}>
             <img
               src={news.urlToImage}
-              className="card-img-top img-fluid w-50" alt="..."
+              className="current-news-image" alt="..."
             />
-            <div className="card-body d-flex flex-column justify-content-between align-items-start ">
+            <div className="current-new-content">
               <div className={`source-name ${news.source.name.replace(/ /g, "").replace(/\(|\)/g, "")}`}>{news.source.name}</div>
-              <h5 className="card-title my-1">{news.title}</h5>
-              <p className="card-text my-1">{news.description}</p>
-              <div className="align-self-end">
+              <h5 className="current-news-title">{news.title}</h5>
+              <p className="current-news-description">{news.description}</p>
+              <div className="current-news-button">
                 <Link to={`/detail/${news.id}`}>
-                  <span className="btn btn-dark"> Leer más</span>
+                  Leer más
                 </Link>
               </div>
             </div>

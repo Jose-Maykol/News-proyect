@@ -1,10 +1,42 @@
+.current-news-cart {
+  margin: 50px 10px;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--gris);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
 
+.current-new-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.current-news-image {
+  width: 40%;
+}
+
+.current-news-button{
+  align-self: flex-end;
+  background-color: var(--negro2);
+  padding: .5rem 1.5rem;
+  border-radius: .3rem;
+}
+
+.current-news-button a {
+  text-decoration: none;
+  color: var(--blanco);
+}
 
 .source-name {
   border-radius: .3rem;
   padding: .2rem 1.5rem;
   font-weight: 500;
   border: 1px solid var(--blanco);
+  align-self: flex-start;
 }
 .CNNSpanish {
   background-color: var(--rojo);
@@ -39,4 +71,24 @@
 .Marca {
   background-color: var(--rojo);
   color: var(--blanco);
+}
+
+@media (max-width: 765px) {
+  .current-news-cart {
+    flex-direction: column;
+    min-height: 550px;
+    justify-content: center;
+    padding: 1rem 2rem;
+  }
+  
+  .current-news-image {
+    width: 100%;
+  }
+  .current-news-title {
+    font-size: 1rem;
+  }
+
+  .current-news-description {
+    font-size: .8rem;
+  }
 }
