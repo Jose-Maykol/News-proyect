@@ -1,16 +1,25 @@
 .title-new {
     display: flex;
     width: 100%;
-    border-bottom: .2rem solid black;
+    border-bottom: 3px solid black;
     border-left: .5rem solid #157DEC;
 }
 
 .title-box {
-    padding: .3rem 3rem 0 1rem;
+    padding: .5rem 3rem .1rem 1rem;
     color: white;
     background-color: black;
 }
 
 .title-box h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 765px) {
+    .title-box {
+        padding-right: 1.5rem;
+    }
+    .title-box h2 {
+        font-size: .8rem;
+    }
 }

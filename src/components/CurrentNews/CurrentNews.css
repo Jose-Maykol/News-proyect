@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: row;
   gap: 2rem;
+  max-height: 350px;
 }
 
 .current-new-content {
@@ -38,6 +39,7 @@
   border: 1px solid var(--blanco);
   align-self: flex-start;
 }
+
 .CNNSpanish {
   background-color: var(--rojo);
   color: var(--blanco);
@@ -76,9 +78,10 @@
 @media (max-width: 765px) {
   .current-news-cart {
     flex-direction: column;
-    min-height: 550px;
+    min-height: 500px;
     justify-content: center;
     padding: 1rem 2rem;
+    margin: 20px 0;
   }
   
   .current-news-image {

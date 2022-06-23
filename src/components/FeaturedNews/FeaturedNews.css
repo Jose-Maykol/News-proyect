@@ -1,0 +1,123 @@
+.featured-news-container {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 50%;
+  gap: 50px;
+}
+
+.featured-news-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-news-item:nth-child(1) {
+  grid-column: 1/-1;
+}
+
+.featured-news-item:nth-child(1) img {
+  max-width: 100%;
+}
+
+.featured-news-item:nth-child(2) {
+  grid-column: 0/ auto;
+  grid-row: 2;
+}
+
+.featured-news-item:nth-child(3) {
+  grid-column: 1/ auto;
+  grid-row: 2;
+}
+
+.featured-news-item:nth-child(4) {
+  grid-column: 2/ auto;
+  grid-row: 2;
+}
+
+.featured-news-item:nth-child(2) img {
+  max-width: 100%;
+}
+.featured-news-item:nth-child(3) img {
+  max-width: 100%;
+}
+.featured-news-item:nth-child(4) img {
+  max-width: 100%;
+}
+
+.featured-news-item .featured-news-content {
+  background-color: var(--negro2);
+  color: var(--blanco);
+  padding: 1rem 1.5rem ;
+}
+
+.featured-news-item:nth-child(1) .featured-news-content {
+  background-color: var(--negro2);
+  color: var(--blanco);
+  padding: 1rem 2rem ;
+}
+
+.featured-news-content {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featured-news-content a {
+  background-color: var(--blanco);
+  padding: .3rem 1rem;
+  border-radius: .3rem;
+  color: var(--negro);
+  text-decoration: none;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.featured-news-content a:hover {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+.featured-news-name  {
+  border-radius: .3rem;
+  padding: .2rem 1.5rem;
+  font-weight: 500;
+  border: none;
+  background-color: var(--negro);
+}
+
+.CNNSpanish {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.ElMundo {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+.GoogleNewsArgentina {
+  background-color: var(--negro2);
+  color: var(--blanco);
+}
+
+.Infobae {
+  background-color: var(--naranja);
+  color: var(--blanco);
+}
+
+.LaGaceta {
+  background-color: var(--azul2);
+  color: var(--blanco);
+}
+
+.LaNacion {
+  background-color: var(--azul-oscuro2);
+  color: var(--blanco);
+}
+
+.Marca {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
