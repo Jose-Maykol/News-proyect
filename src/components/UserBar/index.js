@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../AuthContext";
+import { AuthContext } from "../../context/AuthContext";
 import { signOut} from "firebase/auth";
 import { auth } from "../../services/firebase";
 import './UserBar.css'

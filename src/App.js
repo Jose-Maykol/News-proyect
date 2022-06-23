@@ -2,13 +2,12 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header';
-import Footer from './components/Footer';
 import Home from './pages/Home';
 import { auth } from './services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import { ContextProvider } from './context';
+import { ContextProvider } from './context/ApiContext';
 import NewsDetailContainer from './components/NewsDetailContainer';
-import { AuthProvider } from './AuthContext';
+import { AuthProvider } from './context/AuthContext';
 import Category from './pages/Category';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -40,7 +39,6 @@ const App = () => {
           </Routes>
         </AuthProvider>
       </Router>
-      {/* <Footer /> */}
     </ContextProvider>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { ApiContext } from '../../context';
+import { ApiContext } from '../../context/ApiContext';
 
 const Search = () => {
     const { LimitCurrent } = useContext(ApiContext)

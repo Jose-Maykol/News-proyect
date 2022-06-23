@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ApiContext } from '../../context';
+import { ApiContext } from '../../context/ApiContext';
 import "./FeaturedNews.css"
 
 const FeaturedNews = () => {
@@ -7,11 +7,11 @@ const FeaturedNews = () => {
   const { Feature } = useContext(ApiContext);
 
   return (
-    <div className="row" style={{ margin: "50px 30px 50px 30px" }}>
+    <div className="featured-news">
       {Feature ?
           <div className="featured-news-container" >
           {Feature.map( featuredNews =>
-            <div className="featured-news-item">
+            <div key={featuredNews.id} className="featured-news-item">
               <img src={featuredNews.urlToImage} alt={featuredNews.title}/>
               <div className="featured-news-content">
                 <div className={`featured-news-name ${featuredNews.source.name.replace(/ /g, "").replace(/\(|\)/g, "")}`}>

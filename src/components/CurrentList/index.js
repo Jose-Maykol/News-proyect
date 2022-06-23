@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
-import { ApiContext } from '../../context';
-
+import { ApiContext } from '../../context/ApiContext';
 
 const CurrentList = () => {
 

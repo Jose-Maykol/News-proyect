@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import './SearchBar.css'
-import { ApiContext } from '../../context';
+import { ApiContext } from '../../context/ApiContext';
 import { useNavigate } from 'react-router-dom'
 
 const SearchBar = () => {

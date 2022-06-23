@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import './NavBar.css'
-import { ApiContext } from "../../context";
+import { ApiContext } from "../../context/ApiContext";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {

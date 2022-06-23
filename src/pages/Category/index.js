@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { ApiContext } from '../../context'
+import { ApiContext } from '../../context/ApiContext'
 import { Link } from 'react-router-dom'
 
 const Category = () => {
