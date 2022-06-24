@@ -1,20 +1,41 @@
 .navbar-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 1rem;
-    width: 100%;
-    padding: .5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-box a {
-    color: white;
-    text-decoration: none;
-    font-size: .8rem;
-    padding: 0.5em 3em;
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.5em 3em;
 }
 
 .navbar-box a:hover {
-    border-bottom: .1em solid white;
+  border-bottom: 0.1em solid white;
+}
+
+@media (max-width: 550px) {
+  .navbar-box a {
+    width: 100vw;
+  }
+
+  .active {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--negro);
+  }
+
+  .hidden {
+    display: none;
+    background-color: var(--negro);
+  }
+
+  .navbar-container i {
+    display: block;
+  }
 }

@@ -1,7 +1,7 @@
 .content-user {
   display: flex;
   flex-direction: row;
-  align-items: center ;
+  align-items: center;
   justify-content: center;
   gap: 0 2rem;
 }
@@ -15,8 +15,8 @@
   background-color: var(--negro);
   color: var(--blanco);
   border: 1px solid var(--blanco);
-  border-radius: .2rem;
-  padding: .2rem 1.5rem;
+  border-radius: 0.2rem;
+  padding: 0.2rem 1.5rem;
   font-weight: 500;
 }
 

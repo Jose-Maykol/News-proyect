@@ -1,28 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react'
 import './NavBar.css'
-import { ApiContext } from "../../context/ApiContext";
-import { Link } from "react-router-dom";
+import { ApiContext } from '../../context/ApiContext'
+import { Link } from 'react-router-dom'
 
-const NavBar = () => {
-
+const NavBar = ({ active }) => {
   const { getCategoryNews } = useContext(ApiContext)
+  console.log(active)
 
   return (
-    <nav className="navbar-box">
-      <Link to="/" >
+    <nav className={`navbar-box ${active}`}>
+      <Link to='/'>
         <span>Home</span>
       </Link>
-      <Link to="/category" onClick={() => getCategoryNews("science")}>
+      <Link to='/category' onClick={() => getCategoryNews('science')}>
         <span>Science</span>
       </Link>
-      <Link to="/category" onClick={() => getCategoryNews("sports")}>
+      <Link to='/category' onClick={() => getCategoryNews('sports')}>
         <span>Sports</span>
       </Link>
-      <Link to="/category" onClick={() => getCategoryNews("technology")}>
+      <Link to='/category' onClick={() => getCategoryNews('technology')}>
         <span>Technology</span>
       </Link>
     </nav>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar

@@ -1,25 +1,25 @@
 .title-new {
-    display: flex;
-    width: 100%;
-    border-bottom: 3px solid black;
-    border-left: .5rem solid #157DEC;
+  display: flex;
+  width: 100%;
+  border-bottom: 3px solid black;
+  border-left: 0.5rem solid #157dec;
 }
 
 .title-box {
-    padding: .5rem 3rem .1rem 1rem;
-    color: white;
-    background-color: black;
+  padding: 0.5rem 3rem 0.1rem 1rem;
+  color: white;
+  background-color: black;
 }
 
 .title-box h2 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 765px) {
-    .title-box {
-        padding-right: 1.5rem;
-    }
-    .title-box h2 {
-        font-size: .8rem;
-    }
+  .title-box {
+    padding-right: 1.5rem;
+  }
+  .title-box h2 {
+    font-size: 0.8rem;
+  }
 }
