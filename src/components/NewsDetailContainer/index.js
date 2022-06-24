@@ -2,6 +2,7 @@ import React from 'react';
 import CategoryContainer from '../CategoryContainer';
 import CurrentContainer from '../CurrentContainer';
 import CurrentList from '../CurrentList';
+import FeatureContainer from '../FeatureContainer';
 
 
 const NewsDetailContainer = () => {
@@ -11,6 +12,7 @@ const NewsDetailContainer = () => {
             <div className='row'>
                 <CurrentContainer />
                 <CategoryContainer />
+                <FeatureContainer />
                 <CurrentList />
             </div>
         </div>

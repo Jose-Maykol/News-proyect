@@ -14,7 +14,7 @@ const CurrentNews = () => {
           <div className="current-news-cart" key={news.id}>
             <img
               src={news.urlToImage}
-              className="current-news-image" alt="..."
+              className="current-news-image" alt={news.title}
             />
             <div className="current-new-content">
               <div className={`source-name ${news.source.name.replace(/ /g, "").replace(/\(|\)/g, "")}`}>{news.source.name}</div>

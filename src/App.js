@@ -12,6 +12,7 @@ import Category from './pages/Category';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Search from './pages/Search';
+import Error from './pages/Error'
 
 const App = () => {
 
@@ -36,6 +37,7 @@ const App = () => {
             <Route path='/register' element={<Register />} />
             <Route path="/category" element={<Category />} />
             <Route path="/search" element={<Search />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </AuthProvider>
       </Router>

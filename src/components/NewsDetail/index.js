@@ -41,7 +41,7 @@ const NewsDetails = ({
         <img
           src={urlToImage}
           className="card-img-top img-fluid w-50"
-          alt="..."
+          alt={title}
         />
         <div className="card-body d-flex flex-column justify-content-between align-items-start ">
           <p className="card-text my-1">{content}</p>

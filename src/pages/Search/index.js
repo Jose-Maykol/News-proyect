@@ -15,7 +15,7 @@ const Search = () => {
                         <div className="card d-flex flex-row mb-2 p-3 my-3 mx-5">
                             <img
                                 src={news.urlToImage}
-                                className="card-img-top img-fluid w-50" alt="..."
+                                className="card-img-top img-fluid w-50" alt={news.title}
                             />
                             <div className="card-body d-flex flex-column justify-content-between align-items-start ">
                                 <div className=" p-2 bg-primary rounded-3 my-1">{news.source.name}</div>

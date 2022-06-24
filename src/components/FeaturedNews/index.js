@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ApiContext } from '../../context/ApiContext';
 import "./FeaturedNews.css"
 
@@ -9,17 +10,19 @@ const FeaturedNews = () => {
   return (
     <div className="featured-news">
       {Feature ?
-          <div className="featured-news-container" >
-          {Feature.map( featuredNews =>
+        <div className="featured-news-container" >
+          {Feature.map(featuredNews =>
             <div key={featuredNews.id} className="featured-news-item">
-              <img src={featuredNews.urlToImage} alt={featuredNews.title}/>
+              <img src={featuredNews.urlToImage} alt={featuredNews.title} />
               <div className="featured-news-content">
                 <div className={`featured-news-name ${featuredNews.source.name.replace(/ /g, "").replace(/\(|\)/g, "")}`}>
                   {featuredNews.source.name}
                 </div>
                 <h3>{featuredNews.title}</h3>
                 <p>{featuredNews.description}</p>
-                <a href="/"> Leer mas </a>
+                <Link to={`/detail/${featuredNews.id}`}>
+                  <span> Leer mas.. </span>
+                </Link>
               </div>
             </div>
           )}
