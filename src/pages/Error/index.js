@@ -1,12 +1,11 @@
 import React from 'react'
-import { useLocation } from 'react-router-dom'
 
 const Error = () => {
 
-    let location = useLocation();
-
     return (
-        <div>{location.pathname}</div>
+        <div style={{ textAlign: "center", marginTop: "10rem" }}>
+            <h1>No hay Ruta</h1>
+        </div>
     )
 }
 

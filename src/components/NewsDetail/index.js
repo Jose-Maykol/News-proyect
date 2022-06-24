@@ -1,18 +1,7 @@
 import React from "react";
 
-const NewsDetails = ({
-  noticia: {
-    author,
-    content,
-    description,
-    publishedAt,
-    title,
-    urlToImage,
-    url,
-    source,
-    id
-  },
-}) => {
+const NewsDetails = ({ noticia: { author, content, description, publishedAt, title, urlToImage, url, source, id } }) => {
+
   return (
     <div key={id} className="col-8">
       <div className="title-new" >

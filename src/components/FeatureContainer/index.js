@@ -1,15 +1,14 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ApiContext } from '../../context/ApiContext';
 import NewsDetails from '../NewsDetail';
 
 const FeatureContainer = () => {
 
-    let location = useLocation();
-
+    let params = useParams()
     const { Feature } = useContext(ApiContext);
 
-    let filterFeature = Feature.filter(ele => `/detail/${ele.id}` === location.pathname);
+    let filterFeature = Feature.filter(ele => ele.id === params.id);
 
     return (
         <>
