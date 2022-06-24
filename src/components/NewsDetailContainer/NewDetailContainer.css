@@ -1,0 +1,16 @@
+.content-news-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 30px;
+}
+
+@media (max-width: 900px) {
+  .content-news-detail {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+}

@@ -8,8 +8,6 @@ import './UserBar.css'
 const UserBar = () => {
   const { currentUser } = useContext(AuthContext)
 
-  console.log(currentUser)
-
   const handleClick = () => {
     signOut(auth)
       .then(() => {

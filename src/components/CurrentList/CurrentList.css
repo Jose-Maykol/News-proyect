@@ -1,0 +1,111 @@
+.container-current-list {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.current-list-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.current-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--negro2);
+  margin: 10px;
+  padding: 20px 10px;
+  border-radius: .5rem;
+  color: var(--blanco);
+}
+
+.current-list-item img {
+  width: 95%;
+  border-radius: .5rem;
+}
+
+
+.source-name {
+  border-radius: 0.3rem;
+  padding: 0.2rem 1.5rem;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  background-color: var(--negro);
+}
+
+.CNNSpanish {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.ElMundo {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+.GoogleNewsArgentina {
+  background-color: var(--negro2);
+  color: var(--blanco);
+}
+
+.Infobae {
+  background-color: var(--naranja);
+  color: var(--blanco);
+}
+
+.LaGaceta {
+  background-color: var(--azul2);
+  color: var(--blanco);
+}
+
+.LaNacion {
+  background-color: var(--azul-oscuro2);
+  color: var(--blanco);
+}
+
+.Marca {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+
+@media (max-width: 900px) {
+  .container-current-list {
+    width: 90%;
+  }
+  .current-list-item {
+    flex-direction: row;
+    width: 600px;
+    max-height: 260px;
+  }
+
+  .current-list-item img {
+    width: 50%;
+    border-radius: .5rem;
+  }
+
+  .current-list-item h2 {
+    font-size: 1rem;
+  }
+  .current-list-item p {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .current-list-item {
+    flex-direction: column;
+    max-width: 250px;
+    max-height: 800px;
+  }
+  .current-list-item img {
+    width: 100%;
+    border-radius: .5rem;
+  }
+}

@@ -1,19 +1,30 @@
 import React, { useContext } from 'react'
 import { ApiContext } from '../../context/ApiContext'
+import './CurrentList.css'
 
 const CurrentList = () => {
   const { Feature } = useContext(ApiContext)
 
   return (
-    <div className='col-4'>
+    <div className='container-current-list'>
+      <div className='title-new'>
+        <div className='title-box'>
+          <h2> Otras noticias </h2>
+        </div>
+      </div>
       {Feature.map((news) => (
-        <div className='card text-white bg-dark mb-3' style={{ maxWidth: '18rem' }}>
-          <div className='card-header'>
-            <img src={news.urlToImage} style={{ width: '255px', height: '150px' }} alt='img-card' />
-          </div>
-          <div className='card-body'>
-            <h5 className='card-title'>{news.title}</h5>
-            <p className='card-text'>{news.description}</p>
+        <div className='current-list-item' >
+            <img src={news.urlToImage} alt={news.title} />
+          <div className='current-list-body'>
+            <div
+              className={`source-name ${news.source.name
+                .replace(/ /g, '')
+                .replace(/\(|\)/g, '')}`}
+            >
+              {news.source.name}
+            </div>
+            <h2>{news.title}</h2>
+            <p>{news.description}</p>
           </div>
         </div>
       ))}

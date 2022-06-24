@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 
 const NavBar = ({ active }) => {
   const { getCategoryNews } = useContext(ApiContext)
-  console.log(active)
 
   return (
     <nav className={`navbar-box ${active}`}>
