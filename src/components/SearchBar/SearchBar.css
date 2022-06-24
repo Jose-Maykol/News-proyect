@@ -12,6 +12,7 @@
 
 .search-icon {
   background-color: transparent;
+  border: none;
 }
 
 .search-icon i {

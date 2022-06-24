@@ -50,7 +50,7 @@
 .header-login a {
   display: flex;
   padding: 0.35em 1.2em;
-  border: 0.1em solid white;
+  border: 1px solid white;
   text-decoration: none;
   border-radius: 0.12em;
   color: white;
@@ -64,6 +64,7 @@
 }
 
 .header-navbar {
+  margin: .5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -79,6 +80,8 @@
   .header {
     display: flex;
     flex-direction: column;
+    height: 140px;
+    justify-content: center;
   }
 }
 

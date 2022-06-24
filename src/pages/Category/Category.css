@@ -1,0 +1,113 @@
+.container-category-news {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.category-news-cart {
+  margin: 10px 0;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--gris);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 800px;
+  max-height: 350px;
+}
+
+.current-new-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.category-news-image {
+  width: 40%;
+}
+
+.category-news-button {
+  align-self: flex-end;
+  background-color: var(--negro2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+}
+
+.category-news-button a {
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+.source-name {
+  border-radius: 0.3rem;
+  padding: 0.2rem 1.5rem;
+  font-weight: 500;
+  border: 1px solid var(--blanco);
+  align-self: flex-start;
+}
+
+.CNNSpanish {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+.ElMundo {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+}
+
+.GoogleNewsArgentina {
+  background-color: var(--negro2);
+  color: var(--blanco);
+}
+
+.Infobae {
+  background-color: var(--naranja);
+  color: var(--blanco);
+}
+
+.LaGaceta {
+  background-color: var(--azul2);
+  color: var(--blanco);
+}
+
+.LaNacion {
+  background-color: var(--azul-oscuro2);
+  color: var(--blanco);
+}
+
+.Marca {
+  background-color: var(--rojo);
+  color: var(--blanco);
+}
+
+@media (max-width: 750px) {
+
+  .container-category-news {
+    margin: 0 20px;
+    margin-top: 160px;
+  }
+
+  .category-news-cart {
+    margin: 10px 30px;
+    flex-direction: column;
+    max-height: 600px;
+    justify-content: center;
+    padding: 1rem;
+    margin: 10px 0;
+  }
+
+  .category-news-image {
+    width: 100%;
+  }
+  .category-news-title {
+    font-size: 1rem;
+  }
+
+  .category-news-description {
+    font-size: 0.8rem;
+  }
+}

@@ -20,7 +20,7 @@
 }
 
 @media (max-width: 550px) {
-  .navbar-box a {
+  .navbar-box {
     width: 100vw;
   }
 
@@ -28,14 +28,12 @@
     display: flex;
     flex-direction: column;
     background-color: var(--negro);
+    position: absolute;
+    bottom: -180px;
   }
 
   .hidden {
     display: none;
     background-color: var(--negro);
-  }
-
-  .navbar-container i {
-    display: block;
   }
 }

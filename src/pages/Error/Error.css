@@ -1,0 +1,17 @@
+.page-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.page-error h1 {
+  color: var(--azul);
+  font-size: 6rem;
+}
+
+.page-error p {
+  font-size: 1.5rem;
+}
