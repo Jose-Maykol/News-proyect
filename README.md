@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# RPA LATAM - RPA News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Acerca del Proyecto:
 
-## Available Scripts
+Proyecto realizado para RPA LATAM con la finalidad de mostrar noticias destacadas, actuales y por categoria.
 
-In the project directory, you can run:
+### Herramientas Utilizadas:
 
-### `npm start`
+- React JS.
+- FireBase.
+- Uuid.
+- GitHubPages.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Instalación del Proyecto:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Debe clonar el repositorio utlizando git clone https://github.com/Jose-Maykol/News-proyect
+2. Luego deberá instalar todas las dependencias del proyecto, para eso deberá ejecutar npm install (también puede utilizar npm i)
+3. Por último, puede ejecutar el proyecto y realizar las pruebas utilizando npm start. Si no desea instalar el proyecto, puede utilizarlo ingresando al siguiente enlace: https://enrique-ninapaytan-ecomerce.netlify.app/
 
-### `npm test`
+## Funcionalidad del Proyecto: 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### NavBar:
 
-### `npm run build`
+- Puedes navegar a las distintas secciones en forma SPA.
+- Secciones a mostrar: Home / Science / Sports / Technology / Iniciar Sesión.
+- Barra de busqueda y logo del proyecto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Sección Home:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Muestra las noticias destacadas y las actuales.
+- Tienen un boton "Leer Mas.." para ver el detalle de las noticias.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Sección Categorias:
 
-### `npm run eject`
+- Muestra las noticias filtradas por la categoria escogida.
+- Tienen un boton "Leer Mas.." para ver el detalle de las noticias.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Barra de Busqueda:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Muestra una noticia especifica dependiendo de lo que se coloque en la barra.
+- Muestra las noticias filtradas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Detalle de la Noticia:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Muestra la noticia completa y una lista de "Otras noticias".
 
-## Learn More
+### Registro:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Tiene 3 campos: Email, Contraseña y Confirmar Contraseña.
+- Si el usuario ya esta registrado sale una alerta de "El correo ya esta registrado !!!".
+- Si no esta registrado te redirige al Home con tu Email en el NavBar y aparece el boton de Cerrar Sesión.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Login:
 
-### Code Splitting
+- Tiene 2 campos: Email y Contraseña.
+- Si el Email y la Contraseña son incorrectas, saldra una alerta de "Correo o contraseña incorrecto !!!".
+- Si las credenciales son correctas te redirige al Home con tu Email en el NavBar y aparece el boton de Cerrar Sesión.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Footer:
 
-### Analyzing the Bundle Size
+- Muestra los botones de Redes Sociales.
+- Muestra el CopiRight.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
