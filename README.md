@@ -15,7 +15,7 @@ Proyecto realizado para RPA LATAM con la finalidad de mostrar noticias destacada
 
 1. Debe clonar el repositorio utlizando git clone https://github.com/Jose-Maykol/News-proyect
 2. Luego deberá instalar todas las dependencias del proyecto, para eso deberá ejecutar npm install (también puede utilizar npm i)
-3. Por último, puede ejecutar el proyecto y realizar las pruebas utilizando npm start. Si no desea instalar el proyecto, puede utilizarlo ingresando al siguiente enlace: https://enrique-ninapaytan-ecomerce.netlify.app/
+3. Por último, puede ejecutar el proyecto y realizar las pruebas utilizando npm start. Si no desea instalar el proyecto, puede utilizarlo ingresando al siguiente enlace: https://zingy-pasca-b93351.netlify.app/
 
 ## Funcionalidad del Proyecto: 
 
