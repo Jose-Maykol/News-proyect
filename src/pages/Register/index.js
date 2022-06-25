@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { auth } from '../../services/firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-
+import { useNavigate } from 'react-router-dom'
 import './Register.css'
 
 const Register = () => {
@@ -11,6 +11,8 @@ const Register = () => {
     password: '',
     confirmPassword: '',
   })
+
+  let navigate = useNavigate()
 
   const { email, password, confirmPassword } = registerData
 
@@ -28,7 +30,6 @@ const Register = () => {
     })
   }
 
-  //falta comprobar que las dos contrasenas sean iguales
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -37,23 +38,20 @@ const Register = () => {
       Object.keys(errorData).length === 0 ||
       (emailError.length === 0 && passwordError.length === 0)
     ) {
-      console.log('Registrando ...')
       createUserWithEmailAndPassword(auth, email, password)
         .then((res) => {
-          console.log(res.user)
           setRegisterData({
             email: '',
             password: '',
             confirmPassword: '',
           })
           setErrorCreateAccount(false)
+          navigate('/', { replace: true })
         })
         .catch((e) => {
-          console.warn(e.message)
           setErrorCreateAccount(true)
         })
     } else {
-      console.log('Datos invalidos ...')
       setErrorCreateAccount(false)
     }
   }
@@ -119,7 +117,7 @@ const Register = () => {
             type='password'
             name='confirmPassword'
             id='register-confirmPassword'
-            placeholder='Contraseña'
+            placeholder='Confirmar Contraseña'
             autoComplete='on'
             onChange={handleChange}
             value={confirmPassword}
