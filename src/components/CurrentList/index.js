@@ -13,8 +13,8 @@ const CurrentList = () => {
         </div>
       </div>
       {Feature.map((news) => (
-        <div className='current-list-item' >
-            <img src={news.urlToImage} alt={news.title} />
+        <div className='current-list-item' key={news.id}>
+          <img src={news.urlToImage} alt={news.title} />
           <div className='current-list-body'>
             <div
               className={`source-name ${news.source.name

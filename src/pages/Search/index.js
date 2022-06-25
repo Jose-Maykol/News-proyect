@@ -5,8 +5,6 @@ import { ApiContext } from '../../context/ApiContext'
 const Search = () => {
   const { LimitCurrent } = useContext(ApiContext)
 
-  console.log(LimitCurrent)
-
   return (
     <div style={{ marginTop: '150px' }}>
       {LimitCurrent.length > 0 ? (
