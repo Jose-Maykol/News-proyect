@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/RPANews/static/css/main.68162892.css",
+    "main.js": "/RPANews/static/js/main.099240c0.js",
+    "static/js/787.84fc139f.chunk.js": "/RPANews/static/js/787.84fc139f.chunk.js",
+    "index.html": "/RPANews/index.html",
+    "main.68162892.css.map": "/RPANews/static/css/main.68162892.css.map",
+    "main.099240c0.js.map": "/RPANews/static/js/main.099240c0.js.map",
+    "787.84fc139f.chunk.js.map": "/RPANews/static/js/787.84fc139f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68162892.css",
+    "static/js/main.099240c0.js"
+  ]
+}
