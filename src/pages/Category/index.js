@@ -10,6 +10,11 @@ const Category = () => {
   return (
     <Fragment>
       <div className='container-category-news'>
+        <div className='title-new'>
+          <div className='title-box'>
+            <h2> Lista de Noticias </h2>
+          </div>
+        </div>
         {Category ? (
           Category.map((news) => (
             <div className='category-news-cart' key={news.id}>
@@ -36,7 +41,7 @@ const Category = () => {
           </div>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </Fragment>
   )
 }
