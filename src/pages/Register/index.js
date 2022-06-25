@@ -84,7 +84,7 @@ const Register = () => {
       <div className=' form-container'>
         <h3>
           {' '}
-          Bienvenido a <span> NEWS </span>
+          Bienvenido a <span> RPANews </span>
         </h3>
         <h1>REGISTRATE</h1>
         {errorCreateAccount === true ? (

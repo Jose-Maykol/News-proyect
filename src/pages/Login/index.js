@@ -45,7 +45,7 @@ const Login = () => {
       <div className=' form-container'>
         <h3>
           {' '}
-          Bienvenido a <span> NEWS </span>
+          Bienvenido a <span> RPANews </span>
         </h3>
         <h1>INICIA SESION</h1>
         {errorLogin === true ? (
@@ -71,9 +71,6 @@ const Login = () => {
             onChange={handleChange}
             value={password}
           />
-          <a id='retrieve' href='/'>
-            ¿Te olvidastes tu contraseña?
-          </a>
           <button type='submit'>Ingresar</button>
           <p id='create'>
             {' '}

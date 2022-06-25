@@ -18,6 +18,7 @@ const NewsDetails = ({
       <div className='news-detail-content'>
         <img src={urlToImage} className='' alt={title} />
         <p>{content} {content} {content} {content} {content}</p>
+        <a href={url}>{url}</a>
       </div>
     </div>
   )
