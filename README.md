@@ -4,6 +4,8 @@
 
 Proyecto realizado para RPA LATAM con la finalidad de mostrar noticias destacadas, actuales y por categoria.
 
+![alt-text](src/img/gif.gif)
+
 ### Herramientas Utilizadas:
 
 - React JS.
