@@ -1,0 +1,23 @@
+.subcribe-content {
+  margin-top: 140px;
+  margin-left: 5rem;
+}
+
+.subcribe-content h1 {
+  color: var(--azul);
+}
+
+.subcribe-content > h2 {
+  display: block;
+  width: 800px;
+  line-height: 2rem;
+  font-weight: 400;
+}
+
+.suscribe-options {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
