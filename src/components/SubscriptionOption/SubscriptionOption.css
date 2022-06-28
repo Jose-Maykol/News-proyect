@@ -1,0 +1,56 @@
+.subscription-option-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 400px;
+  height: 500px;
+  border-radius: .5rem;
+  padding: 2rem 1rem;
+}
+
+.premium {
+  background-color: var(--negro2);
+  color: var(--blanco);
+}
+
+.normal {
+  background-color: var(--gris);
+}
+
+.subscription-option-content h2 {
+  color: var(--azul);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subscription-option-content p {
+  padding-top: 80px;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.subscription-option-content p span {
+  font-size: 1rem
+}
+
+.subscription-option-content ul { 
+  width: 100%;
+  border-top: 5px solid var(--azul);
+  padding: 20px 40px;
+  align-self: flex-start;
+}
+
+.subscription-option-content button {
+  color: var(--blanco);
+  background-color: var(--azul);
+  font-weight: bold;
+  padding: .5rem 2rem;
+  border-radius: 10px;
+  border: none;
+}
+
+
+.subscription-option-content button:hover {
+  background-color: var(--azul2);
+}

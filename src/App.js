@@ -13,6 +13,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Search from './pages/Search'
 import Error from './pages/Error'
+import Subcribe from './pages/Subscribe'
 import useScrollToTop from './components/useScrollToTop'
 import Payment from './pages/Payment'
 
@@ -40,6 +41,7 @@ const App = () => {
           <Route path='/category' element={<Category />} />
           <Route path='/search' element={<Search />} />
           <Route path='/payment' element={<Payment />} />
+          <Route path='/subcribe' element={<Subcribe />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </AuthProvider>

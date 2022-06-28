@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext'
 import { signOut } from 'firebase/auth'
@@ -26,9 +26,14 @@ const UserBar = () => {
           </button>
         </div>
       ) : (
-        <Link to='/login'>
-          <span>Iniciar sesión</span>
-        </Link>
+        <div className='content-user'>
+          <Link to='/login'>
+            <span>Iniciar sesión</span>
+          </Link>
+          <Link to='/subcribe'>
+            <span>Suscribirse</span>
+          </Link>
+        </div>
       )}
     </div>
   )
