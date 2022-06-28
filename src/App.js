@@ -14,6 +14,7 @@ import Register from './pages/Register'
 import Search from './pages/Search'
 import Error from './pages/Error'
 import useScrollToTop from './components/useScrollToTop'
+import Payment from './pages/Payment'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
@@ -38,6 +39,7 @@ const App = () => {
           <Route path='/register' element={<Register />} />
           <Route path='/category' element={<Category />} />
           <Route path='/search' element={<Search />} />
+          <Route path='/payment' element={<Payment />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </AuthProvider>
