@@ -12,6 +12,7 @@
 .current-new-content {
   display: flex;
   flex-direction: column;
+  width: 100%;
   justify-content: space-between;
   gap: 0.5rem;
 }
@@ -30,6 +31,27 @@
 .current-news-button a {
   text-decoration: none;
   color: var(--blanco);
+}
+
+.current-new-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.current-new-top button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--negro);
+}
+
+.current-new-top i {
+  color: var(--blanco);
+}
+
+.current-new-top  button:hover {
+  background-color: var(--negro2);
 }
 
 .source-name {
@@ -85,6 +107,7 @@
 
   .current-news-image {
     width: 100%;
+    max-height: 200px;
   }
   .current-news-title {
     font-size: 1rem;
