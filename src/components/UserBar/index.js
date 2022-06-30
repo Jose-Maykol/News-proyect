@@ -24,13 +24,16 @@ const UserBar = () => {
           <button className='user-logout' onClick={handleClick}>
             Cerrar sesión
           </button>
+          <Link to='/subcribe'>
+            <span>Suscribirse</span>
+          </Link>
         </div>
       ) : (
         <div className='content-user'>
           <Link to='/login'>
             <span>Iniciar sesión</span>
           </Link>
-          <Link to='/subcribe'>
+          <Link to='/login'>
             <span>Suscribirse</span>
           </Link>
         </div>
