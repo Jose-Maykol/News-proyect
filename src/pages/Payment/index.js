@@ -4,11 +4,11 @@ import { stripePromise } from '../../utils/Stripe'
 import CheckoutForm from '../../components/CheckoutForm'
 
 const Payment = () => {
-    return (
-        <Elements stripe={stripePromise}>
-            <CheckoutForm />
-        </Elements>
-    )
+  return (
+    <Elements stripe={stripePromise}>
+      <CheckoutForm />
+    </Elements>
+  )
 }
 
 export default Payment

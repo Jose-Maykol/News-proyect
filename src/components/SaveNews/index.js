@@ -1,14 +1,13 @@
-import React, { useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from 'react'
 import { app } from '../../services/firebase'
-import { getFirestore, collection, addDoc, getDocs, query } from "firebase/firestore";
+import { getFirestore, collection, addDoc, getDocs, query } from 'firebase/firestore'
 import { AuthContext } from '../../context/AuthContext'
 
-const SaveNews = ({news}) => {
-
+const SaveNews = ({ news }) => {
   const { currentUser } = useContext(AuthContext)
-  const [saved, setSaved] = useState(false);
+  const [saved, setSaved] = useState(false)
 
-  const db = getFirestore(app);
+  const db = getFirestore(app)
 
   /* const  getSaved = async () => {
     const q = query(collection(db ,currentUser.uid));
@@ -18,12 +17,12 @@ const SaveNews = ({news}) => {
     })
   } */
 
- /*  useEffect(() => {
+  /*  useEffect(() => {
    getSaved();
   }, [getSaved]); */
 
   const onHandleClick = async () => {
-    console.log(currentUser.uid);
+    console.log(currentUser.uid)
     try {
       const docRef = await addDoc(collection(db, currentUser.uid), {
         id: news.id,
@@ -33,19 +32,19 @@ const SaveNews = ({news}) => {
         url: news.url,
         urlToImage: news.urlToImage,
         content: news.content,
-      });
-      console.log("Document written with ID: ", docRef.id);
-      setSaved(true);
+      })
+      console.log('Document written with ID: ', docRef.id)
+      setSaved(true)
     } catch (e) {
-      console.error("Error adding document: ", e);
+      console.error('Error adding document: ', e)
     }
   }
 
   return (
     <button onClick={onHandleClick}>
-      {saved ? <i className="bi bi-bookmark-fill"></i> : <i className="bi bi-bookmark"></i>}
+      {saved ? <i className='bi bi-bookmark-fill'></i> : <i className='bi bi-bookmark'></i>}
     </button>
-  );
+  )
 }
- 
-export default SaveNews;
+
+export default SaveNews

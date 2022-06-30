@@ -17,9 +17,7 @@ const CurrentList = () => {
           <img src={news.urlToImage} alt={news.title} />
           <div className='current-list-body'>
             <div
-              className={`source-name ${news.source.name
-                .replace(/ /g, '')
-                .replace(/\(|\)/g, '')}`}
+              className={`source-name ${news.source.name.replace(/ /g, '').replace(/\(|\)/g, '')}`}
             >
               {news.source.name}
             </div>

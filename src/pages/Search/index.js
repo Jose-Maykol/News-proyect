@@ -6,14 +6,13 @@ import SaveNews from '../../components/SaveNews'
 import './Search.css'
 
 const Search = () => {
-
   const { LimitCurrent } = useContext(ApiContext)
   const { currentUser } = useContext(AuthContext)
 
   return (
     <div className='search-container'>
       {LimitCurrent.length > 0 ? (
-        LimitCurrent.map(news => (
+        LimitCurrent.map((news) => (
           <div className='current-news-cart' key={news.id}>
             <img src={news.urlToImage} className='search-news-image' alt={news.title} />
             <div className='current-new-content'>
@@ -25,7 +24,7 @@ const Search = () => {
                 >
                   {news.source.name}
                 </p>
-                {currentUser ? <SaveNews news={news}/> : null}
+                {currentUser ? <SaveNews news={news} /> : null}
               </div>
               <h5 className='search-news-title'>{news.title}</h5>
               <p className='search-news-description'>{news.description}</p>

@@ -27,8 +27,8 @@ const UserBar = () => {
           <Link to='/subcribe'>
             <span>Suscribirse</span>
           </Link>
-          <Link to="/save">
-            <i className="bi bi-bookmark"></i>
+          <Link to='/save'>
+            <i className='bi bi-bookmark'></i>
           </Link>
         </div>
       ) : (

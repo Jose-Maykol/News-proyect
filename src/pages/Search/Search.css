@@ -42,7 +42,6 @@
   width: 100%;
 }
 
-
 .search-new-top button {
   padding: 5px;
   border-radius: 5px;
@@ -53,7 +52,7 @@
   color: var(--blanco);
 }
 
-.search-new-top  button:hover {
+.search-new-top button:hover {
   background-color: var(--negro2);
 }
 

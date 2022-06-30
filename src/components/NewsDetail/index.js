@@ -12,12 +12,14 @@ const NewsDetails = ({
         </div>
       </div>
       <div className='news-detail-body'>
-        <h1 >{title}</h1>
-        <h3 > {description} </h3>
+        <h1>{title}</h1>
+        <h3> {description} </h3>
       </div>
       <div className='news-detail-content'>
         <img src={urlToImage} className='' alt={title} />
-        <p>{content} {content} {content} {content} {content}</p>
+        <p>
+          {content} {content} {content} {content} {content}
+        </p>
         <a href={url}>{url}</a>
       </div>
     </div>

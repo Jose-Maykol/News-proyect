@@ -39,7 +39,6 @@
   width: 100%;
 }
 
-
 .current-new-top button {
   padding: 5px;
   border-radius: 5px;
@@ -50,7 +49,7 @@
   color: var(--blanco);
 }
 
-.current-new-top  button:hover {
+.current-new-top button:hover {
   background-color: var(--negro2);
 }
 

@@ -76,7 +76,7 @@ const Login = () => {
             {' '}
             ¿Aún no tienes cuenta?
             <Link to='/register'>
-              <span href='/'> Create una cuenta aqui. </span>
+              Create una cuenta aqui.
             </Link>
           </p>
         </form>

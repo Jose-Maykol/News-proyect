@@ -22,7 +22,6 @@ import Save from './pages/Save'
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
 
-
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setCurrentUser(user)

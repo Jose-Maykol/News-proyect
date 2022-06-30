@@ -64,7 +64,7 @@
 }
 
 .header-navbar {
-  margin: .5rem;
+  margin: 0.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,12 +80,20 @@
   .header {
     display: flex;
     flex-direction: column;
-    height: 140px;
+    height: 190px;
     justify-content: center;
+  }
+
+  .header-searchLogin {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
 @media (max-width: 550px) {
+  .header {
+    height: 170px;
+  }
   .header-navbar {
     display: flex;
     flex-direction: column;

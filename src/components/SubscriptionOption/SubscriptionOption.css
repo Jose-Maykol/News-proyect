@@ -5,7 +5,7 @@
   justify-content: space-evenly;
   width: 400px;
   height: 500px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 2rem 1rem;
 }
 
@@ -31,10 +31,10 @@
 }
 
 .subscription-option-content p span {
-  font-size: 1rem
+  font-size: 1rem;
 }
 
-.subscription-option-content ul { 
+.subscription-option-content ul {
   width: 100%;
   border-top: 5px solid var(--azul);
   padding: 20px 40px;
@@ -45,11 +45,10 @@
   color: var(--blanco);
   background-color: var(--azul);
   font-weight: bold;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 10px;
   border: none;
 }
-
 
 .subscription-option-content button:hover {
   background-color: var(--azul2);

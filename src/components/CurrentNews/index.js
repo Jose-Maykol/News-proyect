@@ -6,7 +6,6 @@ import SaveNews from '../SaveNews'
 import './CurrentNews.css'
 
 const CurrentNews = () => {
-
   const { currentUser } = useContext(AuthContext)
   const { Current } = useContext(ApiContext)
 
@@ -25,7 +24,7 @@ const CurrentNews = () => {
                 >
                   {news.source.name}
                 </p>
-                {currentUser ? <SaveNews news={news}/> : null}
+                {currentUser ? <SaveNews news={news} /> : null}
               </div>
               <h5 className='current-news-title'>{news.title}</h5>
               <p className='current-news-description'>{news.description}</p>

@@ -20,15 +20,14 @@
   background-color: var(--negro2);
   margin: 10px;
   padding: 20px 10px;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: var(--blanco);
 }
 
 .current-list-item img {
   width: 95%;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 }
-
 
 .source-name {
   border-radius: 0.3rem;
@@ -74,7 +73,6 @@
   color: var(--blanco);
 }
 
-
 @media (max-width: 900px) {
   .container-current-list {
     width: 90%;
@@ -87,14 +85,14 @@
 
   .current-list-item img {
     width: 50%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   .current-list-item h2 {
     font-size: 1rem;
   }
   .current-list-item p {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -106,6 +104,6 @@
   }
   .current-list-item img {
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 }
