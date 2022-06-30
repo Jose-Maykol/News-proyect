@@ -17,6 +17,7 @@ import Subcribe from './pages/Subscribe'
 import useScrollToTop from './components/useScrollToTop'
 import Payment from './pages/Payment'
 import { SuscriptionProvider } from './context/SuscriptionContext'
+import Save from './pages/Save'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
@@ -44,6 +45,7 @@ const App = () => {
             <Route path='/search' element={<Search />} />
             <Route path='/payment' element={<Payment />} />
             <Route path='/subcribe' element={<Subcribe />} />
+            <Route path='/save' element={<Save />} />
             <Route path='*' element={<Error />} />
           </Routes>
         </AuthProvider>
