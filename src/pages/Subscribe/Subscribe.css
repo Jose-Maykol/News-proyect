@@ -1,23 +1,157 @@
+.subcribe-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
 .subcribe-content {
-  margin-top: 140px;
-  margin-left: 5rem;
+  margin: 20vh 30px ;
+  width: 50vw
+}
+
+.subcribe-container img {
+  width: 50vw;
 }
 
 .subcribe-content h1 {
   color: var(--azul);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .subcribe-content > h2 {
-  display: block;
-  width: 800px;
-  line-height: 2rem;
+  line-height: 2.2rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 .suscribe-options {
   display: flex;
-  gap: 4rem;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 0;
+  gap: 20px;
+}
+
+.suscribe-plans {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.suscribe-select {
+  display: flex;
+  gap: 20px;
+}
+
+.suscribe-select p {
+  font-weight: 600;
+}
+
+.suscribe-select input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.suscribe-select label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.suscribe-select label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.suscribe-select input:checked + label {
+  background: var(--azul2);
+}
+
+.suscribe-select input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+.suscribe-select label:active:after {
+  width: 50px;
+}
+
+@media (max-width: 1100px) {
+  .subcribe-container {
+    background-image: url("../../../public/img/subcripcion.jpg");
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subcribe-content {
+    align-self: center;
+    padding: 40px;
+    border-radius: .6rem;
+    background-color: var(--blanco);
+    min-width: 90vw;
+  }
+
+  .subcribe-container img {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .suscribe-options {
+    gap: 0px
+  }
+  .subcribe-content {
+    line-height: 1rem;
+    min-height: 500px;
+  }
+
+  .subcribe-content h1{
+    font-size: 1rem;
+  }
+
+  .subcribe-content h2{
+    font-size: .7rem;
+    line-height: 1rem;
+  }
+
+  .suscribe-select label {
+    width: 40px;
+    height: 20px;
+  }
+
+  .suscribe-select label:after {
+    top: 3px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .suscribe-select label:active:after {
+    width: 25px;
+  }
+
+  .suscribe-select p {
+    font-size: .8rem;
+  }
 }

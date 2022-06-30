@@ -20,13 +20,14 @@
 
 .subscription-option-content h2 {
   color: var(--azul);
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.8rem;
   text-transform: uppercase;
 }
 
 .subscription-option-content p {
-  padding-top: 80px;
-  font-size: 4rem;
+  padding-top: 20px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -52,4 +53,23 @@
 
 .subscription-option-content button:hover {
   background-color: var(--azul2);
+}
+
+@media (max-width: 600px) {
+  .subscription-option-content {
+    width: 90vw;
+    max-height: 300px;
+  }
+  .subscription-option-content h2 {
+    font-size: 1.2rem;
+  }
+  .subscription-option-content p {
+    font-size: 1.5rem;
+  }
+  .subscription-option-content ul {
+    font-size: .7rem;
+  }
+  .subscription-option-content button {
+    font-size: .8rem;
+  }
 }

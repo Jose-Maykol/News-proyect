@@ -16,7 +16,7 @@
   color: var(--blanco);
   border: 1px solid var(--blanco);
   border-radius: 0.2rem;
-  padding: 0.2rem 1.5rem;
+  padding: 0.2rem 0.5rem;
   font-weight: 500;
 }
 
