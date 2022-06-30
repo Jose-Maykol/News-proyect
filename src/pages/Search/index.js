@@ -1,26 +1,36 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ApiContext } from '../../context/ApiContext'
+import { AuthContext } from '../../context/AuthContext'
+import SaveNews from '../../components/SaveNews'
+import './Search.css'
 
 const Search = () => {
+
   const { LimitCurrent } = useContext(ApiContext)
+  const { currentUser } = useContext(AuthContext)
 
   return (
-    <div style={{ marginTop: '150px' }}>
+    <div className='search-container'>
       {LimitCurrent.length > 0 ? (
-        LimitCurrent.map((news) => (
-          <div key={news.id}>
-            <div className='card d-flex flex-row mb-2 p-3 my-3 mx-5'>
-              <img src={news.urlToImage} className='card-img-top img-fluid w-50' alt={news.title} />
-              <div className='card-body d-flex flex-column justify-content-between align-items-start '>
-                <div className=' p-2 bg-primary rounded-3 my-1'>{news.source.name}</div>
-                <h5 className='card-title my-1'>{news.title}</h5>
-                <p className='card-text my-1'>{news.description}</p>
-                <div className='align-self-end'>
-                  <Link to={`/detail/${news.id}`}>
-                    <span className='btn btn-dark'> Leer más</span>
-                  </Link>
-                </div>
+        LimitCurrent.map(news => (
+          <div className='current-news-cart' key={news.id}>
+            <img src={news.urlToImage} className='search-news-image' alt={news.title} />
+            <div className='current-new-content'>
+              <div className='search-new-top'>
+                <p
+                  className={`source-name ${news.source.name
+                    .replace(/ /g, '')
+                    .replace(/\(|\)/g, '')}`}
+                >
+                  {news.source.name}
+                </p>
+                {currentUser ? <SaveNews news={news}/> : null}
+              </div>
+              <h5 className='search-news-title'>{news.title}</h5>
+              <p className='search-news-description'>{news.description}</p>
+              <div className='search-news-button'>
+                <Link to={`/detail/${news.id}`}>Leer más</Link>
               </div>
             </div>
           </div>

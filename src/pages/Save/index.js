@@ -3,7 +3,7 @@ import { getDocs, getFirestore, collection } from 'firebase/firestore';
 import { app } from '../../services/firebase'
 import { Link } from "react-router-dom";
 import { AuthContext } from '../../context/AuthContext'
-
+import './Save.css'
 
 const Save = () => {
 
@@ -27,7 +27,7 @@ const Save = () => {
 
 
     return (
-        <div>
+        <div className="saved-container">
             {data.map(news => (
                 <div className='current-news-cart' key={news.id}>
                     <img src={news.urlToImage} className='current-news-image' alt={news.title} />
