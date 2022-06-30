@@ -20,11 +20,6 @@ const Header = () => {
       <div className='header-box'>
         <div className='header-searchLogin'>
           <SearchBar />
-          <Link to="/payment">
-            <div style={{ textDecoration: "none" }}>
-              <span>Suscripción</span>
-            </div>
-          </Link>
           <UserBar />
         </div>
         <div className='header-navbar'>

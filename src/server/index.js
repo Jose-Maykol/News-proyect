@@ -11,12 +11,12 @@ app.use(express.json())
 app.post('/payment', async (req, res) => {
 
     try {
-        const { id, amount } = req.body
+        const { id, amount, description } = req.body
 
         const payment = await stripe.paymentIntents.create({
-            amount: amount,
+            amount: amount * 100,
             currency: "USD",
-            description: "Premium",
+            description: description,
             payment_method: id,
             confirm: true,
         })

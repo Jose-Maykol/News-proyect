@@ -16,6 +16,7 @@ import Error from './pages/Error'
 import Subcribe from './pages/Subscribe'
 import useScrollToTop from './components/useScrollToTop'
 import Payment from './pages/Payment'
+import { SuscriptionProvider } from './context/SuscriptionContext'
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(null)
@@ -31,20 +32,22 @@ const App = () => {
 
   return (
     <ContextProvider>
-      <AuthProvider value={{ currentUser }}>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/detail/:id' element={<NewsDetailContainer />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/category' element={<Category />} />
-          <Route path='/search' element={<Search />} />
-          <Route path='/payment' element={<Payment />} />
-          <Route path='/subcribe' element={<Subcribe />} />
-          <Route path='*' element={<Error />} />
-        </Routes>
-      </AuthProvider>
+      <SuscriptionProvider>
+        <AuthProvider value={{ currentUser }}>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/detail/:id' element={<NewsDetailContainer />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/category' element={<Category />} />
+            <Route path='/search' element={<Search />} />
+            <Route path='/payment' element={<Payment />} />
+            <Route path='/subcribe' element={<Subcribe />} />
+            <Route path='*' element={<Error />} />
+          </Routes>
+        </AuthProvider>
+      </SuscriptionProvider>
     </ContextProvider>
   )
 }
