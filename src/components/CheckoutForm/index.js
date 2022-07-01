@@ -45,8 +45,8 @@ const CheckoutForm = () => {
   return (
     <div className='checkout-container'>
       <form className='checkout-form' onSubmit={handleSubmit}>
-        <h2>Subscribete a nuestro sitio</h2>
-        <p>Para que te mantengas mejor informado de todo lo que acontece en el mundo.</p>
+        <h2>Subscribete a nuestro plan {tittle}</h2>
+        <p>Para que te mantengas mejor informado de todo lo que acontece en el mundo tan solo a S/{cash}.</p>
         <CardElement options={{ style: { base: inputStyle } }} />
         <button className='checkout-submit'>Suscribirse</button>
       </form>

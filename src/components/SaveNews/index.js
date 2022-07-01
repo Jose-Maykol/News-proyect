@@ -1,6 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import { app } from '../../services/firebase'
-import { getFirestore, collection, addDoc, getDocs, query } from 'firebase/firestore'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
 import { AuthContext } from '../../context/AuthContext'
 
 const SaveNews = ({ news }) => {
