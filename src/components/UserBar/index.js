@@ -22,7 +22,7 @@ const UserBar = () => {
         <div className='content-user'>
           <p className='current-user'> {currentUser.email}</p>
           <button className='user-logout' onClick={handleClick}>
-            Cerrar sesión
+            <i className='bi bi-arrow-bar-right'></i>
           </button>
           <Link to='/subcribe'>
             <span>Suscribirse</span>

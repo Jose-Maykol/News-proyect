@@ -73,11 +73,7 @@ const Login = () => {
           />
           <button type='submit'>Ingresar</button>
           <p id='create'>
-            {' '}
-            ¿Aún no tienes cuenta?
-            <Link to='/register'>
-              Create una cuenta aqui.
-            </Link>
+            ¿Aún no tienes cuenta? <Link to='/register'>Create una cuenta aqui.</Link>
           </p>
         </form>
       </div>

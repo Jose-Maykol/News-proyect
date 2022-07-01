@@ -40,17 +40,17 @@ const CheckoutForm = () => {
     '::placeholder': {
       color: '#157dec',
     },
-}
+  }
 
   return (
     <div className='checkout-container'>
       <form className='checkout-form' onSubmit={handleSubmit}>
         <h2>Subscribete a nuestro sitio</h2>
         <p>Para que te mantengas mejor informado de todo lo que acontece en el mundo.</p>
-        <CardElement options={{style: {base: inputStyle}}}/>
+        <CardElement options={{ style: { base: inputStyle } }} />
         <button className='checkout-submit'>Suscribirse</button>
       </form>
-      <img className='checkout-image' src="/img/subcripcion.jpg" alt="comida" />
+      <img className='checkout-image' src='/img/subcripcion.jpg' alt='comida' />
     </div>
   )
 }

@@ -5,8 +5,8 @@
 }
 
 .subcribe-content {
-  margin: 20vh 30px ;
-  width: 50vw
+  margin: 20vh 30px;
+  width: 50vw;
 }
 
 .subcribe-container img {
@@ -53,7 +53,7 @@
   font-weight: 600;
 }
 
-.suscribe-select input[type=checkbox]{
+.suscribe-select input[type='checkbox'] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -97,7 +97,7 @@
 
 @media (max-width: 1100px) {
   .subcribe-container {
-    background-image: url("../../../public/img/subcripcion.jpg");
+    background-image: url('../../../public/img/subcripcion.jpg');
     flex-direction: column;
     align-items: center;
   }
@@ -105,7 +105,7 @@
   .subcribe-content {
     align-self: center;
     padding: 40px;
-    border-radius: .6rem;
+    border-radius: 0.6rem;
     background-color: var(--blanco);
     min-width: 90vw;
   }
@@ -115,23 +115,21 @@
   }
 }
 
-
 @media (max-width: 600px) {
-
   .suscribe-options {
-    gap: 0px
+    gap: 0px;
   }
   .subcribe-content {
     line-height: 1rem;
     min-height: 500px;
   }
 
-  .subcribe-content h1{
+  .subcribe-content h1 {
     font-size: 1rem;
   }
 
-  .subcribe-content h2{
-    font-size: .7rem;
+  .subcribe-content h2 {
+    font-size: 0.7rem;
     line-height: 1rem;
   }
 
@@ -152,6 +150,6 @@
   }
 
   .suscribe-select p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }

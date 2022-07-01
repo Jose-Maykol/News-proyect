@@ -16,7 +16,7 @@
   padding: 3rem 5rem;
 }
 
-.checkout-form h2{
+.checkout-form h2 {
   color: var(--azul);
   font-weight: bold;
 }
@@ -24,7 +24,6 @@
 .checkout-form p {
   margin-bottom: 3rem;
 }
-
 
 .checkout-image {
   width: 50vw;
@@ -38,8 +37,8 @@
   background-color: var(--negro);
   color: var(--blanco);
   border: none;
-  border-radius: .5rem;
-  padding: .5rem 2rem ;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
   align-self: flex-end;
 }
 
@@ -49,23 +48,23 @@
 
 .StripeElement {
   padding: 20px;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   border: 1px solid var(--gris);
 }
 
 @media (max-width: 1000px) {
   .checkout-container {
-    background-image: url("../../../public/img/subcripcion.jpg");
+    background-image: url('../../../public/img/subcripcion.jpg');
     flex-direction: column;
     height: 100vh;
     padding: 200px 0 0 0;
   }
-  
+
   .checkout-form {
     background-color: var(--blanco);
     min-width: 330px;
     padding: 40px 20px;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
   }
 
   .checkout-image {

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState, useCallback } from 'react'
 import { getDocs, getFirestore, collection } from 'firebase/firestore'
 import { app } from '../../services/firebase'
 import { Link } from 'react-router-dom'
@@ -10,18 +10,18 @@ const Save = () => {
   const [data, setData] = useState([])
   const db = getFirestore(app)
 
-  const getNews = async () => {
+  const getNews = useCallback(async () => {
     const docSnap = await getDocs(collection(db, currentUser.uid))
     let arr = []
     docSnap.forEach((doc) => {
       arr.push(doc.data())
     })
     return setData(arr)
-  }
+  }, [db, currentUser.uid])
 
   useEffect(() => {
     getNews()
-  }, [])
+  }, [getNews])
   console.log(data)
 
   return (
@@ -31,13 +31,12 @@ const Save = () => {
           <img src={news.urlToImage} className='current-news-image' alt={news.title} />
           <div className='current-new-content'>
             <div className='current-new-top'>
-              <p>{news.source.name}</p>
+              <p className={`source-name ${news.source.replace(/ /g, '').replace(/\(|\)/g, '')}`}>
+                {news.source}
+              </p>
             </div>
             <h5 className='current-news-title'>{news.title}</h5>
             <p className='current-news-description'>{news.description}</p>
-            <div className='current-news-button'>
-              <Link to={`/detail/${news.id}`}>Leer más</Link>
-            </div>
           </div>
         </div>
       ))}
