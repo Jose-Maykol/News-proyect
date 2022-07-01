@@ -1,0 +1,10 @@
+.success {
+  background-color: rgb(28, 180, 28);
+  color: var(--blanco);
+  font-weight: bold;
+  position: absolute;
+  padding: .5rem 2rem;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}

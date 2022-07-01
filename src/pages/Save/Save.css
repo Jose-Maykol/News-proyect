@@ -1,3 +1,15 @@
 .saved-container {
-  margin: 150px 12vw 0 12vw;
+  margin: 150px 10vw 0 10vw;
+}
+
+@media (max-width: 850px) {
+  .saved-container {
+    margin: 220px 10vw 0 10vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .saved-container {
+    margin: 190px 10vw 0 10vw;
+  }
 }

@@ -1,3 +1,23 @@
 .content-home {
   margin-top: 150px;
 }
+
+.charging {
+  display: flex;
+  width: 70vw;
+  height: 900px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+  .content-home {
+    margin-top: 230px;
+  }
+}
+
+@media (max-width: 550px) {
+  .content-home {
+    margin-top: 190px;
+  }
+}

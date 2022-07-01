@@ -1,5 +1,5 @@
 .search-container {
-  margin: 150px 12vw 0 12vw;
+  margin: 150px 10vw 0 10vw;
 }
 .search-news-cart {
   margin: 50px 10px;
@@ -117,5 +117,17 @@
 
   .search-news-description {
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .search-container {
+    margin: 210px 3vw 0 3vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .search-container {
+    margin-top: 180px;
   }
 }

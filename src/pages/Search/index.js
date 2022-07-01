@@ -11,6 +11,11 @@ const Search = () => {
 
   return (
     <div className='search-container'>
+      <div className='title-new'>
+        <div className='title-box'>
+          <h2> Lista de Noticias </h2>
+        </div>
+      </div>
       {LimitCurrent.length > 0 ? (
         LimitCurrent.map((news) => (
           <div className='current-news-cart' key={news.id}>

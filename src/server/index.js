@@ -22,7 +22,7 @@ app.post('/payment', async (req, res) => {
       confirm: true,
     })
     console.log(payment)
-    res.send('Listo')
+    res.send(payment)
   } catch (error) {
     console.log(error)
     res.json({ message: error.raw.message })
