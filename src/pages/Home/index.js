@@ -8,7 +8,7 @@ import './Home.css'
 const Home = () => {
   return (
     <Fragment>
-      <div className='container content-home'>
+      <div className='content-home'>
         <TitleTypeNews text='Noticias destacadas' />
         <FeaturedNews />
         <TitleTypeNews text='Noticias actuales' />

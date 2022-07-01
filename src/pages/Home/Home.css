@@ -1,5 +1,5 @@
 .content-home {
-  margin-top: 150px;
+  margin: 150px 12vw 0 12vw;
 }
 
 .charging {
@@ -12,12 +12,12 @@
 
 @media (max-width: 850px) {
   .content-home {
-    margin-top: 230px;
+    margin-top: 220px;
   }
 }
 
 @media (max-width: 550px) {
   .content-home {
-    margin-top: 190px;
+    margin: 150px 4vw 0 4vw;
   }
 }

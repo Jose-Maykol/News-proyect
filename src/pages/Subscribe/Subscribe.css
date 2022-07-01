@@ -46,6 +46,7 @@
 
 .suscribe-select {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -100,14 +101,22 @@
     background-image: url('../../../public/img/subcripcion.jpg');
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .suscribe-options {
+    gap: 0px;
   }
 
   .subcribe-content {
     align-self: center;
-    padding: 40px;
+    margin-top: 270px;
+    padding: 20px;
     border-radius: 0.6rem;
     background-color: var(--blanco);
-    min-width: 90vw;
+    max-width: 90vw;
+    max-height: 65vh;
   }
 
   .subcribe-container img {
@@ -115,13 +124,13 @@
   }
 }
 
-@media (max-width: 600px) {
-  .suscribe-options {
-    gap: 0px;
-  }
+@media (max-width: 550px) {
   .subcribe-content {
     line-height: 1rem;
-    min-height: 500px;
+    min-width: 70vw;
+    max-height: 475px;
+    margin: 150px 0 0 0;
+    padding: 10px 20px;
   }
 
   .subcribe-content h1 {

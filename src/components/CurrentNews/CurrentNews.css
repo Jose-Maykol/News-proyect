@@ -98,7 +98,7 @@
 @media (max-width: 765px) {
   .current-news-cart {
     flex-direction: column;
-    min-height: 500px;
+    min-height: 550px;
     justify-content: center;
     padding: 1rem 2rem;
     margin: 20px 0;

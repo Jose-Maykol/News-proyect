@@ -18,13 +18,17 @@
   justify-content: center;
   align-items: center;
   padding: 0 5rem;
-  color: var(--azul);
   font-weight: bold;
   font-size: 1.5rem;
 }
 
 .header-logo a {
   text-decoration: none;
+  color: var(--azul);
+}
+
+.header-logo a:hover {
+  color: var(--azul2);
 }
 
 .header-box {
@@ -80,7 +84,7 @@
   .header {
     display: flex;
     flex-direction: column;
-    height: 190px;
+    height: 170px;
     justify-content: center;
   }
 
@@ -92,7 +96,7 @@
 
 @media (max-width: 550px) {
   .header {
-    height: 170px;
+    height: 120px;
   }
   .header-navbar {
     display: flex;

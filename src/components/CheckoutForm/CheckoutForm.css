@@ -57,7 +57,6 @@
     background-image: url('../../../public/img/subcripcion.jpg');
     flex-direction: column;
     height: 100vh;
-    padding: 200px 0 0 0;
   }
 
   .checkout-form {
@@ -73,7 +72,7 @@
 }
 
 @media (max-width: 850px) {
-  .checkout-container {
-    padding: 250px 0 0 0;
+  .checkout-form {
+    margin-top: 130px;
   }
 }

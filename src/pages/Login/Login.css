@@ -68,18 +68,19 @@
 }
 
 .login-input {
-  height: 3.5rem;
+  height: 3rem;
   width: 100%;
   border-radius: 0.5rem;
   border: none;
   background-color: var(--gris);
-  padding: 0.5rem 1rem;
+  padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .login-form button {
   width: 100%;
   padding: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--blanco);
   background-color: var(--azul);
   border-radius: 0.5rem;
@@ -105,5 +106,44 @@
     background-color: var(--blanco);
     border-radius: 0.5rem;
     border: 1px solid var(--gris);
+  }
+}
+
+@media (max-width: 765px) {
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    background: url('../../../public/img/login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .login-form button {
+    padding: .4rem 0;
+    font-size: .8rem;
+  }
+
+  .login-form {
+    margin: 10px;
+  }
+  .login-container img {
+    display: none;
+  }
+
+  .form-container {
+    max-height: 350px;
+  }
+
+  .form-container h3 {
+    font-size: .8rem;
+  }
+
+  .form-container h1 {
+    margin: 0;
+    font-size: 1.4rem;
   }
 }

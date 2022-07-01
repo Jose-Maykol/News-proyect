@@ -1,18 +1,19 @@
 .title-new {
   display: flex;
   width: 100%;
-  border-bottom: 3px solid black;
-  border-left: 0.5rem solid #157dec;
+  height: 40px;
+  border-bottom: 3px solid var(--negro);
+  border-left: 0.5rem solid var(--azul);
 }
 
 .title-box {
-  padding: 0.5rem 3rem 0.1rem 1rem;
-  color: white;
-  background-color: black;
+  padding: 0 1rem;
+  color: var(--blanco);
+  background-color: var(--negro);
 }
 
 .title-box h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 765px) {
