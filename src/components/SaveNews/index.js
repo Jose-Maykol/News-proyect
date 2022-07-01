@@ -9,18 +9,6 @@ const SaveNews = ({ news }) => {
 
   const db = getFirestore(app)
 
-  /* const  getSaved = async () => {
-    const q = query(collection(db ,currentUser.uid));
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {
-      console.log(doc.data());
-    })
-  } */
-
-  /*  useEffect(() => {
-   getSaved();
-  }, [getSaved]); */
-
   const onHandleClick = async () => {
     console.log(currentUser.uid)
     try {
