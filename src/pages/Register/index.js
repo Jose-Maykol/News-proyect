@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
-import { auth } from '../../services/firebase'
+import React, { useState, useContext } from 'react'
+import { auth , app} from '../../services/firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
+import { AuthContext } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import './Register.css'
 
@@ -11,6 +13,9 @@ const Register = () => {
     password: '',
     confirmPassword: '',
   })
+
+  const db = getFirestore(app)
+  const { currentUser } = useContext(AuthContext)
 
   let navigate = useNavigate()
 
@@ -37,6 +42,14 @@ const Register = () => {
       Object.keys(errorData).length === 0 ||
       (emailError.length === 0 && passwordError.length === 0)
     ) {
+      try {
+        addDoc(collection(db, 'users'), {
+          email: email,
+          subscribed: false,
+        })
+      } catch (e) {
+        console.error(e)
+      }
       createUserWithEmailAndPassword(auth, email, password)
         .then((res) => {
           setRegisterData({

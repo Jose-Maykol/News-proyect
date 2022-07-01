@@ -20,6 +20,7 @@ import { SuscriptionProvider } from './context/SuscriptionContext'
 import Save from './pages/Save'
 
 const App = () => {
+
   const [currentUser, setCurrentUser] = useState(null)
 
   useEffect(() => {
