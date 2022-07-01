@@ -1,7 +1,8 @@
-import React, { useContext, useEffect, useState, useCallback } from 'react'
+import React, { useContext, useEffect, useState, useCallback, Fragment } from 'react'
 import { getDocs, getFirestore, collection, doc, deleteDoc, query, where } from 'firebase/firestore'
 import { app } from '../../services/firebase'
 import { AuthContext } from '../../context/AuthContext'
+import Footer from '../../components/Footer'
 import './Save.css'
 
 const Save = () => {
@@ -31,33 +32,47 @@ const Save = () => {
 
   useEffect(() => {
     getNews()
-  }, [getNews])
+  }, [])
+
 
   return (
-    <div className='saved-container'>
-      <div className='title-new'>
-        <div className='title-box'>
-          <h2> Lista de noticias guardadas </h2>
-        </div>
-      </div>
-      {data.map((news) => (
-        <div className='current-news-cart' key={news.id}>
-          <img src={news.urlToImage} className='current-news-image' alt={news.title} />
-          <div className='current-new-content'>
-            <div className='current-new-top'>
-              <p className={`source-name ${news.source.replace(/ /g, '').replace(/\(|\)/g, '')}`}>
-                {news.source}
-              </p>
-              <button onClick={() => deleteNews(news.id)}>
-                <i className='bi bi-trash3-fill'></i>
-              </button>
-            </div>
-            <h5 className='current-news-title'>{news.title}</h5>
-            <p className='current-news-description'>{news.description}</p>
+    <Fragment>
+      <div className='saved-container'>
+        <div className='title-new'>
+          <div className='title-box'>
+            <h2> Lista de noticias guardadas </h2>
           </div>
         </div>
-      ))}
-    </div>
+        {data.length > 0 ? (
+          data.map( news => (
+            <div className='current-news-cart' key={news.id}>
+              <img src={news.urlToImage} className='current-news-image' alt={news.title} />
+              <div className='current-new-content'>
+                <div className='current-new-top'>
+                  <p className={`source-name ${news.source.replace(/ /g, '').replace(/\(|\)/g, '')}`}>
+                    {news.source}
+                  </p>
+                  <button onClick={() => deleteNews(news.id)}>
+                    <i className='bi bi-trash3-fill'></i>
+                  </button>
+                </div>
+                <h5 className='current-news-title'>{news.title}</h5>
+                <p className='current-news-description'>{news.description}</p>
+              </div>
+            </div>
+          ))
+        )
+        : (
+          <div className='charging'>
+          <div className='spinner-border' role='status'>
+            <span className='visually-hidden'>Loading...</span>
+          </div>
+        </div>
+        )}
+        </div>
+      <Footer/>
+    </Fragment>
+
   )
 }
 
