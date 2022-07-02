@@ -1,14 +1,14 @@
 import React, { Fragment, useContext } from 'react'
 import Footer from '../../components/Footer'
 import { ApiContext } from '../../context/ApiContext'
-import { AuthContext } from '../../context/AuthContext'
+import { SuscriptionContext } from '../../context/SuscriptionContext'
 import { Link } from 'react-router-dom'
 import SaveNews from '../../components/SaveNews'
 import './Category.css'
 
 const Category = () => {
 
-  const { currentUser } = useContext(AuthContext)
+  const { bool } = useContext(SuscriptionContext)
   const { Category } = useContext(ApiContext)
 
   return (
@@ -32,7 +32,7 @@ const Category = () => {
                   >
                     {news.source.name}
                   </p>
-                  {currentUser ? <SaveNews news={news} /> : null}
+                  {bool ? <SaveNews news={news} /> : null}
               </div>
                 <h5 className='category-news-title'>{news.title}</h5>
                 <p className='category-news-description'>{news.description}</p>

@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import { ApiContext } from '../../context/ApiContext'
-import { AuthContext } from '../../context/AuthContext'
+import { SuscriptionContext } from '../../context/SuscriptionContext'
 import { Link } from 'react-router-dom'
 import SaveNews from '../SaveNews'
 import './CurrentNews.css'
 
 const CurrentNews = () => {
-  const { currentUser } = useContext(AuthContext)
+  
+  const { bool } = useContext(SuscriptionContext)
   const { Current } = useContext(ApiContext)
 
   return (
@@ -24,7 +25,7 @@ const CurrentNews = () => {
                 >
                   {news.source.name}
                 </p>
-                {currentUser ? <SaveNews news={news} /> : null}
+                {bool ? <SaveNews news={news} /> : null}
               </div>
               <h5 className='current-news-title'>{news.title}</h5>
               <p className='current-news-description'>{news.description}</p>
