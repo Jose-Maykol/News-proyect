@@ -57,10 +57,21 @@ Proyecto realizado para RPA LATAM con la finalidad de mostrar noticias destacada
 - Si el Email y la Contraseña son incorrectas, saldra una alerta de "Correo o contraseña incorrecto !!!".
 - Si las credenciales son correctas te redirige al Home con tu Email en el NavBar y aparece el boton de Cerrar Sesión.
 
+### Suscribe:
+
+- En el suscribe tenemos dos planes para escoger.
+- Al escoger un plan nos abrira el procesador para efectuar la compra.
+- Al suscribirse tendremos el beneficio de poder guardar las noticias en una seccion privada.
+
+### Proocesador:
+
+- En los campos vacios llenar con datos de la tarjeta.
+- Si algun dato de la tarjeta no es correcta saldra una alerta de "Error de tarjeta".
+
 ### Footer:
 
 - Muestra los botones de Redes Sociales.
-- Muestra el CopiRight.
+- Muestra el CopyRight.
 
 
 
