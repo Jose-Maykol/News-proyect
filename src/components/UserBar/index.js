@@ -7,13 +7,14 @@ import { auth } from '../../services/firebase'
 import './UserBar.css'
 
 const UserBar = () => {
-  
-  const { bool } = useContext(SuscriptionContext)
+
+  const { bool, setBool } = useContext(SuscriptionContext)
   const { currentUser } = useContext(AuthContext)
 
   const handleClick = () => {
     signOut(auth)
       .then(() => {
+        setBool(false)
         console.log('Usuario se deconecto ...')
       })
       .catch((e) => console.log(e.message))
@@ -27,14 +28,14 @@ const UserBar = () => {
           <button className='user-logout' onClick={handleClick}>
             <i className='bi bi-arrow-bar-right'></i>
           </button>
-          { bool ? (
+          {bool ? (
             <Link to='/save'>
               <i className='bi bi-bookmark'></i>
             </Link>
-          ): (
+          ) : (
             <Link to='/subcribe'>
-            <span>Suscribirse</span>
-          </Link>
+              <span>Suscribirse</span>
+            </Link>
           )}
         </div>
       ) : (
@@ -43,12 +44,12 @@ const UserBar = () => {
             <span>Iniciar sesión</span>
           </Link>
           {
-             bool ? null
-             : (
-              <Link to='/login'>
-                <span>Suscribirse</span>
-              </Link>
-             )
+            bool ? null
+              : (
+                <Link to='/login'>
+                  <span>Suscribirse</span>
+                </Link>
+              )
           }
 
         </div>

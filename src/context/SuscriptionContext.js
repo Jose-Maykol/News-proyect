@@ -49,7 +49,7 @@ export const SuscriptionProvider = ({ children }) => {
 
 
   return (
-    <SuscriptionContext.Provider value={{ setTittle, tittle, cash, setCash, suscribeToggle, getBoolean, bool }}>
+    <SuscriptionContext.Provider value={{ setTittle, tittle, cash, setCash, suscribeToggle, getBoolean, bool, setBool }}>
       {children}
     </SuscriptionContext.Provider>
   )
