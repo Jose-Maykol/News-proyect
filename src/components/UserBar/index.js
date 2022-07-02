@@ -4,9 +4,12 @@ import { AuthContext } from '../../context/AuthContext'
 import { signOut } from 'firebase/auth'
 import { auth } from '../../services/firebase'
 import './UserBar.css'
+import { SuscriptionContext } from '../../context/SuscriptionContext'
 
 const UserBar = () => {
   const { currentUser } = useContext(AuthContext)
+  const { bool } = useContext(SuscriptionContext)
+
 
   const handleClick = () => {
     signOut(auth)
@@ -16,6 +19,7 @@ const UserBar = () => {
       .catch((e) => console.log(e.message))
   }
 
+
   return (
     <div className='header-login'>
       {currentUser ? (
@@ -24,9 +28,13 @@ const UserBar = () => {
           <button className='user-logout' onClick={handleClick}>
             <i className='bi bi-arrow-bar-right'></i>
           </button>
-          <Link to='/subcribe'>
-            <span>Suscribirse</span>
-          </Link>
+          {bool ?
+            null
+            :
+            <Link to='/subcribe'>
+              <span>Suscribirse</span>
+            </Link>
+          }
           <Link to='/save'>
             <i className='bi bi-bookmark'></i>
           </Link>

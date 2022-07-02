@@ -1,10 +1,12 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { SuscriptionContext } from '../../context/SuscriptionContext'
 import './CheckoutForm.css'
 import SuccessButton from '../SuccessButton'
+import { AuthContext } from '../../context/AuthContext'
+
 
 const CheckoutForm = () => {
 
@@ -12,8 +14,9 @@ const CheckoutForm = () => {
   const elements = useElements()
   const navigate = useNavigate()
 
-  const { tittle, cash } = useContext(SuscriptionContext)
-  const [success, setSuccess] = useState(false);
+  const { tittle, cash, suscribeToggle } = useContext(SuscriptionContext)
+  const { currentUser } = useContext(AuthContext)
+  const [success, setSuccess] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -23,13 +26,14 @@ const CheckoutForm = () => {
     })
     if (!error) {
       const { id } = paymentMethod
-      const { data } = await axios.post('http://localhost:3001/payment', {
+      await axios.post('http://localhost:3001/payment', {
         id,
         amount: cash,
         description: tittle,
       })
       setSuccess(true)
       elements.getElement(CardElement).clear()
+      suscribeToggle(currentUser.email)
       setTimeout(() => {
         navigate('/', { replace: true })
       }, "1000")
@@ -54,7 +58,7 @@ const CheckoutForm = () => {
     <div>
       <div className='checkout-container'>
         <form className='checkout-form' onSubmit={handleSubmit}>
-        {success ? <SuccessButton /> : null}
+          {success ? <SuccessButton /> : null}
           <h2>Subscribete a nuestro plan {tittle}</h2>
           <p>
             Para que te mantengas mejor informado de todo lo que acontece en el mundo tan solo a S/

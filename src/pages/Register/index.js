@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react'
-import { auth , app} from '../../services/firebase'
+import React, { useState } from 'react'
+import { auth, app } from '../../services/firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { getFirestore, collection, addDoc } from 'firebase/firestore'
-import { AuthContext } from '../../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import './Register.css'
 
@@ -15,7 +14,6 @@ const Register = () => {
   })
 
   const db = getFirestore(app)
-  const { currentUser } = useContext(AuthContext)
 
   let navigate = useNavigate()
 

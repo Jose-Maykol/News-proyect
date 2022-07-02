@@ -31,7 +31,7 @@
     "deploy": "gh-pages -d build",
     "custom1": "react-scripts start",
     "custom2": "node ./src/server/index.js",
-    "all": "npm-run-all --parallel start custom1 custom2"
+    "all": "npm-run-all --parallel start custom2"
   },
   "eslintConfig": {
     "extends": [

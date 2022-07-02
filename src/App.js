@@ -32,9 +32,9 @@ const App = () => {
   useScrollToTop()
 
   return (
-    <ContextProvider>
+    <AuthProvider value={{ currentUser }}>
       <SuscriptionProvider>
-        <AuthProvider value={{ currentUser }}>
+        <ContextProvider>
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
@@ -48,9 +48,9 @@ const App = () => {
             <Route path='/save' element={<Save />} />
             <Route path='*' element={<Error />} />
           </Routes>
-        </AuthProvider>
+        </ContextProvider >
       </SuscriptionProvider>
-    </ContextProvider>
+    </AuthProvider>
   )
 }
 
